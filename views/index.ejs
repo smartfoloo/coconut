@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YouTube Music Player</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule="" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1>YouTube Search</h1>
+    <form id="search-form" action="/search" method="get">
+      <input type="text" name="q" placeholder="Search for music..." required>
+    </form>
+
+    <!-- Video results list -->
+    <ul class="results-container">
+      <% videos.forEach(video=> { %>
+        <li class="video-result">
+          <button class="video-card" data-video-id="<%= video.videoId %>">
+            <img src="<%= video.thumbnail %>" alt="<%= video.title %>" class="video-thumbnail">
+            <span>
+              <%= video.title %>
+            </span>
+          </button>
+        </li>
+        <% }) %>
+    </ul>
+
+    <!-- Separate area for the player -->
+    <div class="player-container" id="player-container"></div>
+  </div>
+
+  <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const playerContainer = document.getElementById('player-container');
+
+      function createPlayer(videoId) {
+        const playerElement = document.createElement('div');
+        playerElement.className = 'plyr__video-embed';
+        playerElement.innerHTML = `
+          <iframe
+            src="https://www.youtube.com/embed/${videoId}?autoplay=1&controls=0&showinfo=0&modestbranding=1"
+            allowfullscreen
+            allow="autoplay"
+            style="display: none;"
+          ></iframe>
+        `;
+
+        playerContainer.innerHTML = '';
+        playerContainer.appendChild(playerElement);
+
+        const player = new Plyr(playerElement.querySelector('iframe'), {
+          autoplay: true,
+          muted: false,
+        });
+
+        if (player) {
+          console.log('Audio player initialized successfully:', player);
+        } else {
+          console.error('Player could not be initialized.');
+        }
+      }
+
+      // Handle video card clicks
+      document.querySelectorAll('.video-card').forEach(button => {
+        button.addEventListener('click', function (event) {
+          event.preventDefault();  // Prevent form submission or page reload
+          const videoId = this.getAttribute('data-video-id');
+          createPlayer(videoId);
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
