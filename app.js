@@ -37,7 +37,7 @@ server.on("upgrade", (req, socket, head) => {
 
 // Set up port
 let port = parseInt(process.env.PORT, 10);
-if (isNaN(port)) port = 4000;
+if (isNaN(port)) port = 8000;
 
 // Start the server
 server.listen({ port }, () => {
