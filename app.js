@@ -1,69 +1,60 @@
-const express = require('express');
-const axios = require('axios');
-const dotenv = require('dotenv');
-const path = require('path');
+const { createBareServer } = require("@tomphttp/bare-server-node");
+const express = require("express");
+const { createServer } = require("node:http");
+const { hostname } = require("node:os");
+const { join } = require("path");
 
-dotenv.config();
-
+const bare = createBareServer("/bare/");
 const app = express();
 
-app.set('view engine', 'ejs');
+// Serve static files from the public directory
+app.use(express.static("./public"));
 
-app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(express.urlencoded({ extended: true }));
-
-app.get('/', (req, res) => {
-  res.render('index', { videos: [] });
+// Serve 404 page for all other routes
+app.get('*', (req, res) => {
+  res.status(404).sendFile(join(__dirname, "public", "404.html"));
 });
 
-app.get('/search', async (req, res) => {
-  const query = req.query.q;
-  const searchType = req.query.type;
-  let videos = [];
+const server = createServer();
 
-  if (searchType === 'search' && query) {
-    try {
-      const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
-        params: {
-          part: 'snippet',
-          q: `${query} music`,
-          type: 'video',
-          key: process.env.YOUTUBE_API_KEY,
-          maxResults: 5,
-        },
-      });
-
-      videos = response.data.items.filter(item =>
-        item.snippet.title.toLowerCase().includes('music') ||
-        item.snippet.title.toLowerCase().includes('song')
-      ).map(item => ({
-        title: item.snippet.title,
-        videoId: item.id.videoId,
-        thumbnail: item.snippet.thumbnails.default.url,
-      }));
-
-    } catch (error) {
-      console.error('Error fetching YouTube data:', error);
-    }
-  } else if (searchType === 'url' && query) {
-    const urlPattern = /(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
-    const match = query.match(urlPattern);
-    if (match) {
-      const videoId = match[1];
-      videos.push({
-        title: 'Video from URL',
-        videoId: videoId,
-        thumbnail: `https://img.youtube.com/vi/${videoId}/default.jpg`,
-      });
-    }
+// Handle HTTP requests
+server.on("request", (req, res) => {
+  if (bare.shouldRoute(req)) {
+    bare.routeRequest(req, res);
+  } else {
+    app(req, res);
   }
-
-  res.render('index', { videos });
 });
+
+// Handle WebSocket upgrades
+server.on("upgrade", (req, socket, head) => {
+  if (bare.shouldRoute(req)) {
+    bare.routeUpgrade(req, socket, head);
+  } else {
+    socket.end();
+  }
+});
+
+// Set up port
+let port = parseInt(process.env.PORT, 10);
+if (isNaN(port)) port = 4000;
 
 // Start the server
-const PORT = process.env.PORT || 8000;
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+server.listen({ port }, () => {
+  const address = server.address();
+  console.log("Listening on:");
+  console.log(`\thttp://localhost:${address.port}`);
+  console.log(`\thttp://${hostname()}:${address.port}`);
+  console.log(`\thttp://${address.family === "IPv6" ? `[${address.address}]` : address.address}:${address.port}`);
 });
+
+// Graceful shutdown
+process.on("SIGINT", shutdown);
+process.on("SIGTERM", shutdown);
+
+function shutdown() {
+  console.log("SIGTERM signal received: closing HTTP server");
+  server.close();
+  bare.close();
+  process.exit(0);
+}
