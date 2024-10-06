@@ -139,8 +139,9 @@ function playPrevSong() {
 }
 
 function updateProgressBar() {
-  const progress = document.getElementById('progress');
-  progress.value = (audio.currentTime / audio.duration) * 100;
+  if (audio.duration) {
+    progress.value = (audio.currentTime / audio.duration) * 100;
+  }
 
   if (audio.ended) {
     playNextSong();
@@ -215,6 +216,11 @@ document.getElementById('search-bar').addEventListener('input', (event) => {
 });
 
 audio.addEventListener('timeupdate', updateProgressBar);
+progress.addEventListener('input', () => {
+  const progressValue = progress.value;
+  const duration = audio.duration || 0;
+  audio.currentTime = (progressValue / 100) * duration;
+});
 playPauseButton.addEventListener('click', handlePlayPause);
 document.getElementById('next-song').addEventListener('click', playNextSong);
 document.getElementById('prev-song').addEventListener('click', playPrevSong);
