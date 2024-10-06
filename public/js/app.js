@@ -1,8 +1,10 @@
 let songs = [];
+let likedSongs = [];
 const defaultImage = './assets/default.png';
 
 let currentSongIndex = -1;
 let isPlaying = false;
+let isPlayingLikedSongs = false; // New variable to track if we are playing liked songs
 
 const songImage = document.getElementById('song-image');
 const songTitle = document.getElementById('song-title');
@@ -15,6 +17,7 @@ async function fetchSongs() {
   songs = await response.json();
   loadSongs();
   setupPagination();
+  loadLikedSongs(); // Load liked songs on fetch
 }
 
 function loadSongs(songsToLoad = songs, page = 1, limit = 30) {
@@ -23,7 +26,7 @@ function loadSongs(songsToLoad = songs, page = 1, limit = 30) {
 
   const start = (page - 1) * limit;
   const paginatedSongs = songsToLoad.slice(start, start + limit);
-  const likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
+  likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
 
   paginatedSongs.forEach((song, index) => {
     const isLiked = likedSongs.some(likedSong => likedSong.id === song.id);
@@ -32,10 +35,10 @@ function loadSongs(songsToLoad = songs, page = 1, limit = 30) {
 
     const songItem = document.createElement('div');
     songItem.className = 'song-item';
-    songItem.id = song.id; // Set the id to the song's id
+    songItem.id = song.id;
     songItem.innerHTML = `
       <div class="song-item-left">
-        <button onclick="playSong('${song.id}')">
+        <button onclick="playSong('${song.id}', false)">
           <ion-icon name="play"></ion-icon>
         </button>
         <img src="./assets/images/${song.id}.jpeg" alt="${song.title}">
@@ -67,11 +70,12 @@ function setupPagination() {
   }
 }
 
-function playSong(songId) {
-  const song = songs.find(song => song.id === songId); // Find song by id
+function playSong(songId, fromLikedSongs = false) {
+  const song = fromLikedSongs ? likedSongs.find(song => song.id === songId) : songs.find(song => song.id === songId);
   if (!song) return;
 
-  currentSongIndex = songs.findIndex(s => s.id === song.id); // Update currentSongIndex
+  currentSongIndex = fromLikedSongs ? likedSongs.findIndex(s => s.id === song.id) : songs.findIndex(s => s.id === song.id);
+  isPlayingLikedSongs = fromLikedSongs; // Update the source of the current songs
 
   audio.src = `./assets/songs/${song.id}.mp3`;
   songImage.src = `./assets/images/${song.id}.jpeg`;
@@ -117,14 +121,20 @@ function handlePlayPause() {
 }
 
 function playNextSong() {
-  if (currentSongIndex >= 0 && currentSongIndex < songs.length - 1) {
-    playSong(songs[currentSongIndex + 1].id);
+  const currentIndex = isPlayingLikedSongs ? currentSongIndex : currentSongIndex; // This should already be correct based on the song list you're playing
+  const songList = isPlayingLikedSongs ? likedSongs : songs; // Select the right song list based on the context
+
+  if (currentIndex >= 0 && currentIndex < songList.length - 1) {
+    playSong(songList[currentIndex + 1].id, isPlayingLikedSongs); // Pass the context
   }
 }
 
 function playPrevSong() {
-  if (currentSongIndex > 0) {
-    playSong(songs[currentSongIndex - 1].id);
+  const currentIndex = isPlayingLikedSongs ? currentSongIndex : currentSongIndex;
+  const songList = isPlayingLikedSongs ? likedSongs : songs;
+
+  if (currentIndex > 0) {
+    playSong(songList[currentIndex - 1].id, isPlayingLikedSongs);
   }
 }
 
@@ -133,12 +143,12 @@ function updateProgressBar() {
   progress.value = (audio.currentTime / audio.duration) * 100;
 
   if (audio.ended) {
-    playNextSong(); // Automatically play next song when the current one ends
+    playNextSong();
   }
 }
 
 function addToLikedSongs(index) {
-  const likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
+  likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
   const songToAdd = songs[index];
   const alreadyLiked = likedSongs.some(song => song.id === songToAdd.id);
   const likeButton = document.querySelector(`#like-button-${index}`);
@@ -162,7 +172,7 @@ function loadLikedSongs() {
   const likedSongsContainer = document.getElementById('liked-songs-container');
   likedSongsContainer.innerHTML = '';
 
-  const likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
+  likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
 
   likedSongs.forEach((song, index) => {
     const songItem = document.createElement('div');
@@ -170,7 +180,7 @@ function loadLikedSongs() {
     songItem.id = song.id;
     songItem.innerHTML = `
       <div class="song-item-left">
-        <button onclick="playSong('${song.id}')">
+        <button onclick="playSong('${song.id}', true)">
           <ion-icon name="play"></ion-icon>
         </button>
         <img src="./assets/images/${song.id}.jpeg" alt="${song.title}">
@@ -190,7 +200,7 @@ function loadLikedSongs() {
 }
 
 function removeFromLikedSongs(index) {
-  let likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
+  likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
   likedSongs.splice(index, 1);
   localStorage.setItem('likedSongs', JSON.stringify(likedSongs));
   loadLikedSongs();
