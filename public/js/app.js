@@ -71,28 +71,18 @@ function playSong(songId) {
   const song = songs.find(song => song.id === songId); // Find song by id
   if (!song) return;
 
-  if (currentSongIndex !== song.id) {
-    currentSongIndex = song.id;
+  currentSongIndex = songs.findIndex(s => s.id === song.id); // Update currentSongIndex
 
-    audio.src = `./assets/songs/${song.id}.mp3`;
-    songImage.src = `./assets/images/${song.id}.jpeg`;
-    songTitle.innerText = song.title;
-    songArtist.innerText = song.artist;
-    playPauseButton.innerHTML = '<ion-icon name="pause"></ion-icon>';
+  audio.src = `./assets/songs/${song.id}.mp3`;
+  songImage.src = `./assets/images/${song.id}.jpeg`;
+  songTitle.innerText = song.title;
+  songArtist.innerText = song.artist;
+  playPauseButton.innerHTML = '<ion-icon name="pause"></ion-icon>';
 
-    updateMediaSession(song);
+  updateMediaSession(song);
 
-    isPlaying = true;
-    audio.play();
-  } else if (!isPlaying) {
-    playPauseButton.innerHTML = '<ion-icon name="pause"></ion-icon>';
-    isPlaying = true;
-    audio.play();
-  } else {
-    playPauseButton.innerHTML = '<ion-icon name="play"></ion-icon>';
-    isPlaying = false;
-    audio.pause();
-  }
+  isPlaying = true;
+  audio.play();
 }
 
 function updateMediaSession(song) {
@@ -127,16 +117,14 @@ function handlePlayPause() {
 }
 
 function playNextSong() {
-  const currentIndex = songs.findIndex(song => song.id === currentSongIndex);
-  if (currentIndex >= 0 && currentIndex < songs.length - 1) {
-    playSong(songs[currentIndex + 1].id);
+  if (currentSongIndex >= 0 && currentSongIndex < songs.length - 1) {
+    playSong(songs[currentSongIndex + 1].id);
   }
 }
 
 function playPrevSong() {
-  const currentIndex = songs.findIndex(song => song.id === currentSongIndex);
-  if (currentIndex > 0) {
-    playSong(songs[currentIndex - 1].id);
+  if (currentSongIndex > 0) {
+    playSong(songs[currentSongIndex - 1].id);
   }
 }
 
@@ -144,8 +132,8 @@ function updateProgressBar() {
   const progress = document.getElementById('progress');
   progress.value = (audio.currentTime / audio.duration) * 100;
 
-  if (audio.ended && currentSongIndex < songs.length - 1) {
-    playNextSong();
+  if (audio.ended) {
+    playNextSong(); // Automatically play next song when the current one ends
   }
 }
 
