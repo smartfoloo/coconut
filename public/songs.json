@@ -30,6 +30,11 @@
     "artist": "Post Malone, Morgan Wallen"
   },
   {
+    "title": "If We Being Rëal",
+    "id": "if-we-being-rëal",
+    "artist": "Yeat"
+  },
+  {
     "title": "Popular (with Playboi Carti & Madonna)",
     "id": "popular-(with-playboi-carti-&-madonna)",
     "artist": "The Weeknd, Playboi Carti, Madonna"
@@ -65,6 +70,16 @@
     "artist": "XXXTENTACION"
   },
   {
+    "title": "Sad",
+    "id": "sad",
+    "artist": "XXXTENTACION"
+  },
+  {
+    "title": "Ransom",
+    "id": "ransom",
+    "artist": "Lil Tecca"
+  },
+  {
     "title": "Double Life",
     "id": "double-life",
     "artist": "Pharell Williams"
@@ -88,5 +103,325 @@
     "title": "Chemical",
     "id": "chemical",
     "artist": "Post Malone"
+  },
+  {
+    "title": "Blueberry Faygo",
+    "id": "blueberry-faygo",
+    "artist": "Lil Mosey"
+  },
+  {
+    "title": "In My Head",
+    "id": "in-my-head",
+    "artist": "Lil Tjay"
+  },
+  {
+    "title": "bounce (i just wanna dance)",
+    "id": "bounce-(i-just-wanna-dance)",
+    "artist": "фрози, joyful"
+  },
+  {
+    "title": "kompa pasión",
+    "id": "kompa-pasión",
+    "artist": "фрози, joyful"
+  },
+  {
+    "title": "Brave",
+    "id": "brave",
+    "artist": "こーじゅん"
+  },
+  {
+    "title": "Burning Down",
+    "id": "burning-down",
+    "artist": "Alex Warren"
+  },
+  {
+    "title": "STAY (with Justin Bieber)",
+    "id": "stay-(with-justin-bieber)",
+    "artist": "The Kid LAROI, Justin Bieber"
+  },
+  {
+    "title": "End of Beginning",
+    "id": "end-of-beginning",
+    "artist": "Djo"
+  },
+  {
+    "title": "drunk text",
+    "id": "drunk-text",
+    "artist": "Henry Moodie"
+  },
+  {
+    "title": "pick up the phone",
+    "id": "pick-up-the-phone",
+    "artist": "Henry Moodie"
+  },
+  {
+    "title": "Espresso",
+    "id": "espresso",
+    "artist": "Sabrina Carpenter"
+  },
+  {
+    "title": "Please Please Please",
+    "id": "please-please-please",
+    "artist": "Sabrina Carpenter"
+  },
+  {
+    "title": "Love You Better",
+    "id": "love-you-better",
+    "artist": "Tiagz"
+  },
+  {
+    "title": "Mockingbird",
+    "id": "mockingbird",
+    "artist": "Eminem"
+  },
+  {
+    "title": "Pedro",
+    "id": "pedro",
+    "artist": "Agatino Romero, Jaxomy, Raffaella Carrà"
+  },
+  {
+    "title": "Past Lives",
+    "id": "past-lives",
+    "artist": "Slushii, sapientdream"
+  },
+  {
+    "title": "Sea of Thieves",
+    "id": "sea-of-thieves",
+    "artist": "snackrunner"
+  },
+  {
+    "title": "Forever Young",
+    "id": "forever-young",
+    "artist": "Alphaville"
+  },
+  {
+    "title": "Eye in the Sky",
+    "id": "eye-in-the-sky",
+    "artist": "The Alan Parsons Project"
+  },
+  {
+    "title": "GLORY",
+    "id": "glory",
+    "artist": "Ogryzek"
+  },
+  {
+    "title": "METAMORPHOSIS",
+    "id": "metamorphosis",
+    "artist": "INTERWORLD"
+  },
+  {
+    "title": "Kaikai Kitan",
+    "id": "kaikai-kitan",
+    "artist": "Eve"
+  },
+  {
+    "title": "Dramaturgy",
+    "id": "dramaturgy",
+    "artist": "Eve"
+  },
+  {
+    "title": "怪獣の花唄",
+    "id": "怪獣の花唄",
+    "artist": "Vaundy"
+  },
+  {
+    "title": "odoriko",
+    "id": "odoriko",
+    "artist": "Vaundy"
+  },
+  {
+    "title": "恋風邪にのせて",
+    "id": "恋風邪にのせて",
+    "artist": "Vaundy"
+  },
+  {
+    "title": "しわあわせ",
+    "id": "しわあわせ",
+    "artist": "Vaundy"
+  },
+  {
+    "title": "odoriko dazbee cover",
+    "id": "odoriko-dazbee-cover",
+    "artist": "DAZBEE, Vaundy"
+  },
+  {
+    "title": "白日",
+    "id": "白日",
+    "artist": "King Gnu"
+  },
+  {
+    "title": "水平線",
+    "id": "水平線",
+    "artist": "back number"
+  },
+  {
+    "title": "エメラルド",
+    "id": "エメラルド",
+    "artist": "back number"
+  },
+  {
+    "title": "幾億光年",
+    "id": "幾億光年",
+    "artist": "Omoinotake"
+  },
+  {
+    "title": "どうして",
+    "id": "どうして",
+    "artist": "TakaseToya, emi noda"
+  },
+  {
+    "title": "Sparkle",
+    "id": "sparkle",
+    "artist": "RADWIMPS"
+  },
+  {
+    "title": "Zenzenzense",
+    "id": "zenzenzense",
+    "artist": "RADWIMPS"
+  },
+  {
+    "title": "怪物",
+    "id": "怪物",
+    "artist": "YOASOBI"
+  },
+  {
+    "title": "ハルジオン",
+    "id": "ハルジオン",
+    "artist": "YOASOBI"
+  },
+  {
+    "title": "ハルカ",
+    "id": "ハルカ",
+    "artist": "YOASOBI"
+  },
+  {
+    "title": "優しい彗星",
+    "id": "優しい彗星",
+    "artist": "YOASOBI"
+  },
+  {
+    "title": "あの夢をなぞって",
+    "id": "あの夢をなぞって",
+    "artist": "YOASOBI"
+  },
+  {
+    "title": "夜に駆ける",
+    "id": "夜に駆ける",
+    "artist": "YOASOBI"
+  },
+  {
+    "title": "アンコール",
+    "id": "アンコール",
+    "artist": "YOASOBI"
+  },
+  {
+    "title": "勇者",
+    "id": "勇者",
+    "artist": "YOASOBI"
+  },
+  {
+    "title": "もしも命が描けたら",
+    "id": "もしも命が描けたら",
+    "artist": "YOASOBI"
+  },
+  {
+    "title": "Override",
+    "id": "override",
+    "artist": "Yoshida Yasei"
+  },
+  {
+    "title": "Subtitle",
+    "id": "subtitle",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
+    "title": "Pretender",
+    "id": "pretender",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
+    "title": "I Love",
+    "id": "i-love",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
+    "title": "パラボラ",
+    "id": "パラボラ",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
+    "title": "Universe",
+    "id": "universe",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
+    "title": "Tattoo",
+    "id": "tattoo",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
+    "title": "打上花火",
+    "id": "打上花火",
+    "artist": "Daoko, Kenshi Yonezu"
+  },
+  {
+    "title": "名前は片想い",
+    "id": "名前は片想い",
+    "artist": "Indigo la End"
+  },
+  {
+    "title": "インフェルノ",
+    "id": "インフェルノ",
+    "artist": "Mrs. Green Apple"
+  },
+  {
+    "title": "ダンスホール",
+    "id": "ダンスホール",
+    "artist": "Mrs. Green Apple"
+  },
+  {
+    "title": "Sleepwalk",
+    "id": "sleepwalk",
+    "artist": "natori"
+  },
+  {
+    "title": "Overdose",
+    "id": "overdose",
+    "artist": "natori"
+  },
+  {
+    "title": "エウレカ",
+    "id": "エウレカ",
+    "artist": "natori"
+  },
+  {
+    "title": "フライデー・ナイト",
+    "id": "フライデー・ナイト",
+    "artist": "natori"
+  },
+  {
+    "title": "まちがいさがし",
+    "id": "まちがいさがし",
+    "artist": "Suda Masaki"
+  },
+  {
+    "title": "ラストシーン",
+    "id": "ラストシーン",
+    "artist": "Suda Masaki"
+  },
+  {
+    "title": "rendez vous",
+    "id": "rendez-vous",
+    "artist": "shytaupe"
+  },
+  {
+    "title": "I Will Be There With You",
+    "id": "i-will-be-there-with-you",
+    "artist": "Various Artists"
+  },
+  {
+    "title": "Another Sky",
+    "id": "another-sky",
+    "artist": "Taro Hakase"
   }
 ]

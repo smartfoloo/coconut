@@ -17,7 +17,6 @@ async function fetchSongs() {
   setupPagination();
 }
 
-// Function to load songs, can be called with a filtered list
 function loadSongs(songsToLoad = songs, page = 1, limit = 30) {
   const songsContainer = document.getElementById('songs-container');
   songsContainer.innerHTML = '';
@@ -29,6 +28,7 @@ function loadSongs(songsToLoad = songs, page = 1, limit = 30) {
   paginatedSongs.forEach((song, index) => {
     const isLiked = likedSongs.some(likedSong => likedSong.id === song.id);
     const likeIcon = isLiked ? 'heart' : 'heart-outline';
+    const likeColor = isLiked ? '#ed8796' : 'var(--text)';
 
     const songItem = document.createElement('div');
     songItem.className = 'song-item';
@@ -45,7 +45,7 @@ function loadSongs(songsToLoad = songs, page = 1, limit = 30) {
       </div>
       <div class="song-item-right">
         <button id="like-button-${start + index}" onclick="addToLikedSongs(${start + index})">
-          <ion-icon name="${likeIcon}"></ion-icon>
+          <ion-icon name="${likeIcon}" style="color: ${likeColor}"></ion-icon>
         </button>
       </div>
     `;
@@ -61,7 +61,7 @@ function setupPagination() {
   for (let i = 1; i <= totalPages; i++) {
     const pageButton = document.createElement('button');
     pageButton.innerText = i;
-    pageButton.onclick = () => loadSongs(songs, i); // Pass songs as a parameter
+    pageButton.onclick = () => loadSongs(songs, i);
     paginationContainer.appendChild(pageButton);
   }
 }
@@ -97,7 +97,7 @@ function updateMediaSession(song) {
     navigator.mediaSession.metadata = new MediaMetadata({
       title: song.title,
       artist: song.artist,
-      album: 'Your Album Name',
+      album: '',
       artwork: [
         { src: songImage.src, sizes: '640x640', type: 'image/jpeg' },
         { src: defaultImage, sizes: '128x128', type: 'image/jpeg' }
@@ -155,11 +155,13 @@ function addToLikedSongs(index) {
     localStorage.setItem('likedSongs', JSON.stringify(likedSongs));
     alert(`${songToAdd.title} added to liked songs.`);
     likeButton.innerHTML = '<ion-icon name="heart"></ion-icon>';
+    likeButton.style.color = '#ed8796'
   } else {
     const updatedLikedSongs = likedSongs.filter(song => song.id !== songToAdd.id);
     localStorage.setItem('likedSongs', JSON.stringify(updatedLikedSongs));
     alert(`${songToAdd.title} removed from liked songs.`);
     likeButton.innerHTML = '<ion-icon name="heart-outline"></ion-icon>';
+    likeButton.style.color = 'var(--text)'
   }
 }
 
@@ -216,7 +218,6 @@ function removeFromLikedSongs(index) {
   loadLikedSongs();
 }
 
-// Search function
 document.getElementById('search-bar').addEventListener('input', (event) => {
   const query = event.target.value.toLowerCase();
   const filteredSongs = songs.filter(song =>

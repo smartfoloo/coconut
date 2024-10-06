@@ -121,6 +121,8 @@ a:hover {
   width: 100%;
   transition: 100ms;
   border-radius: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .song-item:hover {
@@ -173,6 +175,7 @@ a:hover {
 #pagination button {
   background: var(--background3);
   color: var(--text);
+  font-family: 'Montserrat';
   border: none;
   margin: 0 5px;
   padding: 10px;
@@ -224,11 +227,19 @@ a:hover {
 
 .song-title {
   font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .song-artist {
   font-size: 12px;
   color: var(--shadow);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 .middle {
@@ -333,4 +344,67 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .song-title, 
+  .song-artist {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .song-title,
+  .song-artist {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .song-title,
+  .song-artist {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .song-title,
+  .song-artist {
+    max-width: 275px;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .content {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .song-title,
+  .song-artist {
+    max-width: 175px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .song-title,
+  .song-artist {
+    max-width: 150px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+
+  .song-title,
+  .song-artist {
+    max-width: 100px;
+  }
 }
