@@ -32,9 +32,10 @@ function loadSongs(songsToLoad = songs, page = 1, limit = 30) {
 
     const songItem = document.createElement('div');
     songItem.className = 'song-item';
+    songItem.id = song.id; // Set the id to the song's id
     songItem.innerHTML = `
       <div class="song-item-left">
-        <button onclick="playSong(${start + index})">
+        <button onclick="playSong('${song.id}')">
           <ion-icon name="play"></ion-icon>
         </button>
         <img src="./assets/images/${song.id}.jpeg" alt="${song.title}">
@@ -66,10 +67,12 @@ function setupPagination() {
   }
 }
 
-function playSong(index) {
-  if (currentSongIndex !== index) {
-    currentSongIndex = index;
-    const song = songs[currentSongIndex];
+function playSong(songId) {
+  const song = songs.find(song => song.id === songId); // Find song by id
+  if (!song) return;
+
+  if (currentSongIndex !== song.id) {
+    currentSongIndex = song.id;
 
     audio.src = `./assets/songs/${song.id}.mp3`;
     songImage.src = `./assets/images/${song.id}.jpeg`;
@@ -124,14 +127,16 @@ function handlePlayPause() {
 }
 
 function playNextSong() {
-  if (currentSongIndex >= 0 && currentSongIndex < songs.length - 1) {
-    playSong(currentSongIndex + 1);
+  const currentIndex = songs.findIndex(song => song.id === currentSongIndex);
+  if (currentIndex >= 0 && currentIndex < songs.length - 1) {
+    playSong(songs[currentIndex + 1].id);
   }
 }
 
 function playPrevSong() {
-  if (currentSongIndex > 0) {
-    playSong(currentSongIndex - 1);
+  const currentIndex = songs.findIndex(song => song.id === currentSongIndex);
+  if (currentIndex > 0) {
+    playSong(songs[currentIndex - 1].id);
   }
 }
 
@@ -155,13 +160,13 @@ function addToLikedSongs(index) {
     localStorage.setItem('likedSongs', JSON.stringify(likedSongs));
     alert(`${songToAdd.title} added to liked songs.`);
     likeButton.innerHTML = '<ion-icon name="heart"></ion-icon>';
-    likeButton.style.color = '#ed8796'
+    likeButton.style.color = '#ed8796';
   } else {
     const updatedLikedSongs = likedSongs.filter(song => song.id !== songToAdd.id);
     localStorage.setItem('likedSongs', JSON.stringify(updatedLikedSongs));
     alert(`${songToAdd.title} removed from liked songs.`);
     likeButton.innerHTML = '<ion-icon name="heart-outline"></ion-icon>';
-    likeButton.style.color = 'var(--text)'
+    likeButton.style.color = 'var(--text)';
   }
 }
 
@@ -174,9 +179,10 @@ function loadLikedSongs() {
   likedSongs.forEach((song, index) => {
     const songItem = document.createElement('div');
     songItem.className = 'song-item';
+    songItem.id = song.id;
     songItem.innerHTML = `
       <div class="song-item-left">
-        <button onclick="playLikedSong(${index})">
+        <button onclick="playSong('${song.id}')">
           <ion-icon name="play"></ion-icon>
         </button>
         <img src="./assets/images/${song.id}.jpeg" alt="${song.title}">
@@ -193,22 +199,6 @@ function loadLikedSongs() {
     `;
     likedSongsContainer.appendChild(songItem);
   });
-}
-
-function playLikedSong(index) {
-  const likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
-  const song = likedSongs[index];
-
-  audio.src = `./assets/songs/${song.id}.mp3`;
-  songImage.src = `./assets/images/${song.id}.jpeg`;
-  songTitle.innerText = song.title;
-  songArtist.innerText = song.artist;
-  playPauseButton.innerHTML = '<ion-icon name="pause"></ion-icon>';
-
-  updateMediaSession(song);
-
-  isPlaying = true;
-  audio.play();
 }
 
 function removeFromLikedSongs(index) {
