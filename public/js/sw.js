@@ -33,12 +33,15 @@ self.addEventListener('fetch', event => {
     );
   } else {
     event.respondWith(
-      caches.match(request).then(response => {
-        return response || fetch(request);
-      }).catch(() => {
-        if (request.headers.get('accept').includes('text/html')) {
-          return caches.match(OFFLINE_URL);
-        }
+      fetch(event.request).catch(function () {
+        return caches.match(event.request).then(function (response) {
+          if (response) {
+            return response;
+          }
+          if (event.request.mode === 'navigate') {
+            return caches.match('./offline.html');
+          }
+        });
       })
     );
   }
