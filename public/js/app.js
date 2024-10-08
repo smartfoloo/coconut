@@ -278,39 +278,54 @@ function loadOfflineSongs() {
   const offlineSongsContainer = document.getElementById('offline-songs-container');
   offlineSongsContainer.innerHTML = '';
 
+  // Open the cache
   caches.open(CACHE_NAME).then(cache => {
-    cache.keys().then(cachedRequests => {
-      const audioFiles = cachedRequests.filter(request => request.url.endsWith('.mp3'));
+    console.log('Cache opened:', cache);
 
-      audioFiles.forEach(request => {
+    // Get all cached requests
+    cache.keys().then(cachedRequests => {
+      console.log('Cached requests:', cachedRequests);
+
+      cachedRequests.forEach(request => {
         const songId = request.url.split('/').pop().replace('.mp3', '');
+        console.log('Song ID from request:', songId);
+
+        // Find the corresponding song from the songs array
         const song = songs.find(s => s.id === songId);
+        console.log('Found song:', song);
 
         if (song) {
           const songItem = document.createElement('div');
           songItem.className = 'song-item';
           songItem.id = song.id;
 
-          const imageUrl = `/assets/images/${song.id}.jpeg`;
-
           songItem.innerHTML = `
             <div class="song-item-left">
               <button onclick="playSong('${song.id}', false)">
                 <ion-icon name="play"></ion-icon>
               </button>
-              <img src="${imageUrl}" alt="${song.title}" onerror="this.src='./assets/default.png'">
+              <img src="./assets/images/${song.id}.jpeg" alt="${song.title}">
               <div class="song-item-info">
                 <p class="song-title">${song.title}</p>
                 <p class="song-artist">${song.artist}</p>
               </div>
             </div>
           `;
+          // Append song item to offline songs container
           offlineSongsContainer.appendChild(songItem);
+          console.log('Appended song item to offline container:', songItem);
+        } else {
+          console.log('No song found for ID:', songId);
         }
       });
+    }).catch(error => {
+      console.error('Error fetching cached requests:', error);
     });
+  }).catch(error => {
+    console.error('Error opening cache:', error);
   });
 }
+
 
 
 audio.addEventListener('timeupdate', updateProgressBar);
