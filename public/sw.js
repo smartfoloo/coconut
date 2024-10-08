@@ -9,7 +9,8 @@ self.addEventListener('install', event => {
         '/index.html',
         '/liked-songs.html',
         '/js/app.js',
-        '/css/global.css'
+        '/css/global.css',
+        '/assets/default.png'
       ]);
     })
   );
