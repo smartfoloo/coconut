@@ -20,6 +20,7 @@ async function fetchSongs() {
   loadSongs();
   setupPagination();
   loadLikedSongs();
+  loadOfflineSongs();
 }
 
 function loadSongs(songsToLoad = songs, page = 1, limit = 30) {
@@ -90,34 +91,29 @@ function downloadSong(songId) {
   ]).then(responses => {
     const [audioResponse, imageResponse] = responses;
 
+    const cachePromises = [];
+
     if (audioResponse.ok) {
-      return caches.open(CACHE_NAME).then(cache => {
-        cache.put(audioUrl, audioResponse.clone());
+      const audioCachePromise = caches.open(CACHE_NAME).then(cache => {
+        return cache.put(audioUrl, audioResponse.clone());
       });
+      cachePromises.push(audioCachePromise);
     } else {
       console.error(`Failed to download audio: ${audioResponse.status}`);
     }
 
     if (imageResponse.ok) {
-      return caches.open(CACHE_NAME).then(cache => {
-        cache.put(imageUrl, imageResponse.clone());
+      const imageCachePromise = caches.open(CACHE_NAME).then(cache => {
+        return cache.put(imageUrl, imageResponse.clone());
       });
+      cachePromises.push(imageCachePromise);
     } else {
       console.error(`Failed to download image: ${imageResponse.status}`);
     }
-  }).then(() => {
-    updateDownloadButton(songId);
 
-    caches.open(CACHE_NAME).then(cache => {
-      cache.match(imageUrl).then(response => {
-        if (response) {
-          response.blob().then(blob => {
-            const imgURL = URL.createObjectURL(blob);
-            document.getElementById('yourImageElementId').src = imgURL; // Replace with your actual img element ID
-          });
-        }
-      });
-    });
+    return Promise.all(cachePromises); 
+  }).then(() => {
+    updateDownloadButton(songId); 
   }).catch(error => {
     console.error('Error during downloading:', error);
   });
@@ -323,5 +319,3 @@ document.getElementById('next-song').addEventListener('click', playNextSong);
 document.getElementById('prev-song').addEventListener('click', playPrevSong);
 
 fetchSongs();
-loadLikedSongs();
-loadOfflineSongs();
