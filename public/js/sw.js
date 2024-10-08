@@ -1,46 +1,34 @@
 const CACHE_NAME = 'coconut-cache';
 const OFFLINE_URL = '/offline.html';
 
-const FILES_TO_CACHE = [
-  '/',
-  '/index.html',
-  '/liked-songs.html',
-  OFFLINE_URL,
-  '/assets/default.png',
-];
-
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
-      return cache.addAll(FILES_TO_CACHE);
+      return cache.addAll([
+        OFFLINE_URL,
+        '/index.html',
+        '/liked-songs.html',
+        '/assets/js/app.js',
+        '/assets/css/global.css'
+      ]);
     })
   );
 });
 
 self.addEventListener('fetch', event => {
-  const { request } = event;
-
-  if (request.url.endsWith('.mp3')) {
+  if (event.request.mode === 'navigate') {
     event.respondWith(
-      caches.open(CACHE_NAME).then(cache => {
-        return cache.match(request).then(response => {
-          return response || fetch(request).then(response => {
-            cache.put(request, response.clone());
-            return response;
-          });
+      fetch(event.request).catch(() => {
+        return caches.open(CACHE_NAME).then(cache => {
+          return cache.match(OFFLINE_URL);
         });
       })
     );
   } else {
     event.respondWith(
-      fetch(event.request).catch(function () {
-        return caches.match(event.request).then(function (response) {
-          if (response) {
-            return response;
-          }
-          if (event.request.mode === 'navigate') {
-            return caches.match('./offline.html');
-          }
+      fetch(event.request).catch(() => {
+        return caches.match(event.request).then(response => {
+          return response || caches.match(OFFLINE_URL);
         });
       })
     );
