@@ -72,6 +72,11 @@
         });
       });
     }
+
+    window.addEventListener('offline', () => {
+      console.log('You are offline. Loading offline songs...');
+      loadOfflineSongs();
+    });
   </script>
   <script src="./js/app.js"></script>
 </body>
