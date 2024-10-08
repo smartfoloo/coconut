@@ -8,8 +8,8 @@ self.addEventListener('install', event => {
         OFFLINE_URL,
         '/index.html',
         '/liked-songs.html',
-        '/assets/js/app.js',
-        '/assets/css/global.css'
+        '/js/app.js',
+        '/css/global.css'
       ]);
     })
   );
