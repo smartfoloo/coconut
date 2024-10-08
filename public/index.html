@@ -28,6 +28,7 @@
     <input type="text" id="search-bar" placeholder="Search for songs..." />
     <div id="songs-container"></div>
     <div id="pagination"></div>
+    <img src="" alt="" id="yourImageElementId">
   </div>
   <div class="audio-controls" id="audio-controls">
     <div class="song-info">
@@ -59,6 +60,13 @@
       </button>
     </div>
   </div>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./js/sw.js').then(() => {
+        console.log('Service Worker registered');
+      });
+    }
+  </script>
   <script src="./js/welcome.js"></script>
   <script src="./js/app.js"></script>
 </body>

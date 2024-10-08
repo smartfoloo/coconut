@@ -1,23 +1,25 @@
 let songs = [];
 let likedSongs = [];
 const defaultImage = './assets/default.png';
-
 let currentSongIndex = -1;
 let isPlaying = false;
-let isPlayingLikedSongs = false; // New variable to track if we are playing liked songs
+let isPlayingLikedSongs = false;
 
 const songImage = document.getElementById('song-image');
 const songTitle = document.getElementById('song-title');
 const songArtist = document.getElementById('song-artist');
 const playPauseButton = document.getElementById('play-pause');
 const audio = new Audio();
+const progress = document.getElementById('progress');
+
+const CACHE_NAME = 'coconut-cache';
 
 async function fetchSongs() {
   const response = await fetch('/songs.json');
   songs = await response.json();
   loadSongs();
   setupPagination();
-  loadLikedSongs(); // Load liked songs on fetch
+  loadLikedSongs();
 }
 
 function loadSongs(songsToLoad = songs, page = 1, limit = 30) {
@@ -36,6 +38,9 @@ function loadSongs(songsToLoad = songs, page = 1, limit = 30) {
     const songItem = document.createElement('div');
     songItem.className = 'song-item';
     songItem.id = song.id;
+
+    const downloadButtonId = `download-button-${song.id}`;
+
     songItem.innerHTML = `
       <div class="song-item-left">
         <button onclick="playSong('${song.id}', false)">
@@ -48,14 +53,76 @@ function loadSongs(songsToLoad = songs, page = 1, limit = 30) {
         </div>
       </div>
       <div class="song-item-right">
+        <button id="${downloadButtonId}" onclick="downloadSong('${song.id}')">
+          <ion-icon name="arrow-down-circle-outline"></ion-icon>
+        </button>
         <button id="like-button-${start + index}" onclick="addToLikedSongs(${start + index})">
           <ion-icon name="${likeIcon}" style="color: ${likeColor}"></ion-icon>
         </button>
       </div>
     `;
     songsContainer.appendChild(songItem);
+    updateDownloadButton(song.id);
   });
 }
+
+function updateDownloadButton(songId) {
+  const downloadButton = document.getElementById(`download-button-${songId}`);
+  caches.open(CACHE_NAME).then(cache => {
+    cache.match(`/assets/songs/${songId}.mp3`).then(response => {
+      if (response) {
+        downloadButton.innerHTML = '<ion-icon name="checkmark-circle-outline"></ion-icon>';
+      }
+    });
+  });
+}
+
+function downloadSong(songId) {
+  const audioUrl = `/assets/songs/${songId}.mp3`;
+  const imageUrl = `/assets/images/${songId}.jpeg`;
+
+  console.log(`Fetching audio from: ${audioUrl}`);
+  console.log(`Fetching image from: ${imageUrl}`);
+
+  Promise.all([
+    fetch(audioUrl),
+    fetch(imageUrl)
+  ]).then(responses => {
+    const [audioResponse, imageResponse] = responses;
+
+    if (audioResponse.ok) {
+      return caches.open(CACHE_NAME).then(cache => {
+        cache.put(audioUrl, audioResponse.clone());
+      });
+    } else {
+      console.error(`Failed to download audio: ${audioResponse.status}`);
+    }
+
+    if (imageResponse.ok) {
+      return caches.open(CACHE_NAME).then(cache => {
+        cache.put(imageUrl, imageResponse.clone());
+      });
+    } else {
+      console.error(`Failed to download image: ${imageResponse.status}`);
+    }
+  }).then(() => {
+    updateDownloadButton(songId);
+
+    caches.open(CACHE_NAME).then(cache => {
+      cache.match(imageUrl).then(response => {
+        if (response) {
+          response.blob().then(blob => {
+            const imgURL = URL.createObjectURL(blob);
+            document.getElementById('yourImageElementId').src = imgURL; // Replace with your actual img element ID
+          });
+        }
+      });
+    });
+  }).catch(error => {
+    console.error('Error during downloading:', error);
+  });
+}
+
 
 function setupPagination() {
   const paginationContainer = document.getElementById('pagination');
@@ -75,7 +142,7 @@ function playSong(songId, fromLikedSongs = false) {
   if (!song) return;
 
   currentSongIndex = fromLikedSongs ? likedSongs.findIndex(s => s.id === song.id) : songs.findIndex(s => s.id === song.id);
-  isPlayingLikedSongs = fromLikedSongs; // Update the source of the current songs
+  isPlayingLikedSongs = fromLikedSongs;
 
   audio.src = `./assets/songs/${song.id}.mp3`;
   songImage.src = `./assets/images/${song.id}.jpeg`;
@@ -121,11 +188,11 @@ function handlePlayPause() {
 }
 
 function playNextSong() {
-  const currentIndex = isPlayingLikedSongs ? currentSongIndex : currentSongIndex; // This should already be correct based on the song list you're playing
-  const songList = isPlayingLikedSongs ? likedSongs : songs; // Select the right song list based on the context
+  const currentIndex = isPlayingLikedSongs ? currentSongIndex : currentSongIndex;
+  const songList = isPlayingLikedSongs ? likedSongs : songs;
 
   if (currentIndex >= 0 && currentIndex < songList.length - 1) {
-    playSong(songList[currentIndex + 1].id, isPlayingLikedSongs); // Pass the context
+    playSong(songList[currentIndex + 1].id, isPlayingLikedSongs);
   }
 }
 
@@ -157,13 +224,11 @@ function addToLikedSongs(index) {
   if (!alreadyLiked) {
     likedSongs.push(songToAdd);
     localStorage.setItem('likedSongs', JSON.stringify(likedSongs));
-    alert(`${songToAdd.title} added to liked songs.`);
     likeButton.innerHTML = '<ion-icon name="heart"></ion-icon>';
     likeButton.style.color = '#ed8796';
   } else {
     const updatedLikedSongs = likedSongs.filter(song => song.id !== songToAdd.id);
     localStorage.setItem('likedSongs', JSON.stringify(updatedLikedSongs));
-    alert(`${songToAdd.title} removed from liked songs.`);
     likeButton.innerHTML = '<ion-icon name="heart-outline"></ion-icon>';
     likeButton.style.color = 'var(--text)';
   }
@@ -179,6 +244,9 @@ function loadLikedSongs() {
     const songItem = document.createElement('div');
     songItem.className = 'song-item';
     songItem.id = song.id;
+
+    const downloadButtonId = `download-button-${song.id}`;
+
     songItem.innerHTML = `
       <div class="song-item-left">
         <button onclick="playSong('${song.id}', true)">
@@ -191,29 +259,58 @@ function loadLikedSongs() {
         </div>
       </div>
       <div class="song-item-right">
+        <button id="${downloadButtonId}" onclick="downloadSong('${song.id}')">
+          <ion-icon name="arrow-down-circle-outline"></ion-icon>
+        </button>
         <button onclick="removeFromLikedSongs(${index})">
           <ion-icon name="heart"></ion-icon>
         </button>
       </div>
     `;
     likedSongsContainer.appendChild(songItem);
+    updateDownloadButton(song.id);
   });
 }
 
 function removeFromLikedSongs(index) {
-  likedSongs = JSON.parse(localStorage.getItem('likedSongs')) || [];
   likedSongs.splice(index, 1);
   localStorage.setItem('likedSongs', JSON.stringify(likedSongs));
   loadLikedSongs();
 }
 
-document.getElementById('search-bar').addEventListener('input', (event) => {
-  const query = event.target.value.toLowerCase();
-  const filteredSongs = songs.filter(song =>
-    song.title.toLowerCase().includes(query) || song.artist.toLowerCase().includes(query)
-  );
-  loadSongs(filteredSongs);
-});
+function loadOfflineSongs() {
+  const offlineSongsContainer = document.getElementById('offline-songs-container');
+  offlineSongsContainer.innerHTML = '';
+
+  caches.open(CACHE_NAME).then(cache => {
+    cache.keys().then(cachedRequests => {
+      cachedRequests.forEach(request => {
+        const songId = request.url.split('/').pop().replace('.mp3', '');
+        const song = songs.find(s => s.id === songId);
+
+        if (song) {
+          const songItem = document.createElement('div');
+          songItem.className = 'song-item';
+          songItem.id = song.id;
+
+          songItem.innerHTML = `
+            <div class="song-item-left">
+              <button onclick="playSong('${song.id}', false)">
+                <ion-icon name="play"></ion-icon>
+              </button>
+              <img src="./assets/images/${song.id}.jpeg" alt="${song.title}">
+              <div class="song-item-info">
+                <p class="song-title">${song.title}</p>
+                <p class="song-artist">${song.artist}</p>
+              </div>
+            </div>
+          `;
+          offlineSongsContainer.appendChild(songItem);
+        }
+      });
+    });
+  });
+}
 
 audio.addEventListener('timeupdate', updateProgressBar);
 progress.addEventListener('input', () => {
@@ -227,3 +324,4 @@ document.getElementById('prev-song').addEventListener('click', playPrevSong);
 
 fetchSongs();
 loadLikedSongs();
+loadOfflineSongs();
