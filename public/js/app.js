@@ -280,7 +280,9 @@ function loadOfflineSongs() {
 
   caches.open(CACHE_NAME).then(cache => {
     cache.keys().then(cachedRequests => {
-      cachedRequests.forEach(request => {
+      const audioFiles = cachedRequests.filter(request => request.url.endsWith('.mp3'));
+
+      audioFiles.forEach(request => {
         const songId = request.url.split('/').pop().replace('.mp3', '');
         const song = songs.find(s => s.id === songId);
 
@@ -289,12 +291,14 @@ function loadOfflineSongs() {
           songItem.className = 'song-item';
           songItem.id = song.id;
 
+          const imageUrl = `/assets/images/${song.id}.jpeg`;
+
           songItem.innerHTML = `
             <div class="song-item-left">
               <button onclick="playSong('${song.id}', false)">
                 <ion-icon name="play"></ion-icon>
               </button>
-              <img src="./assets/images/${song.id}.jpeg" alt="${song.title}">
+              <img src="${imageUrl}" alt="${song.title}" onerror="this.src='./assets/default.png'">
               <div class="song-item-info">
                 <p class="song-title">${song.title}</p>
                 <p class="song-artist">${song.artist}</p>
@@ -307,6 +311,7 @@ function loadOfflineSongs() {
     });
   });
 }
+
 
 audio.addEventListener('timeupdate', updateProgressBar);
 progress.addEventListener('input', () => {
