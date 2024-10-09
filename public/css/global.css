@@ -31,13 +31,17 @@ body {
   display: flex;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 h1 {
   font-size: 45px;
   font-family: 'Montserrat';
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 24px;
   font-family: 'Montserrat';
 }
 
@@ -60,12 +64,32 @@ a:hover {
   height: calc(100% - 100px);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   overflow: auto;
 }
 
-.sidebar a {
-  display: block;
+.logo {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 10px;
+}
+
+.logo img {
+  height: 40px;
+  width: 40px;
+}
+
+.nav-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nav-btns a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
   padding: 10px;
   font-size: 16px;
   border-radius: 10px;
@@ -74,7 +98,7 @@ a:hover {
   font-weight: 700;
 }
 
-.sidebar a:hover {
+.nav-btns a:hover {
   background-color: var(--background3);
 }
 
