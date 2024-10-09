@@ -73,6 +73,121 @@
         });
       });
     }
+  </script>
+  <script>
+    let songs = [];
+    let likedSongs = [];
+    const defaultImage = './assets/default.png';
+    let currentSongIndex = -1;
+    let isPlaying = false;
+    let isPlayingLikedSongs = false;
+
+    const songImage = document.getElementById('song-image');
+    const songTitle = document.getElementById('song-title');
+    const songArtist = document.getElementById('song-artist');
+    const playPauseButton = document.getElementById('play-pause');
+    const audio = new Audio();
+    const progress = document.getElementById('progress');
+
+    const CACHE_NAME = 'coconut-cache';
+
+    async function fetchSongs() {
+      const response = await fetch('/songs.json');
+      songs = await response.json();
+      setupPagination();
+      loadOfflineSongs();
+    }
+
+    function setupPagination() {
+      const paginationContainer = document.getElementById('pagination');
+      paginationContainer.innerHTML = '';
+
+      const totalPages = Math.ceil(songs.length / 30);
+      for (let i = 1; i <= totalPages; i++) {
+        const pageButton = document.createElement('button');
+        pageButton.innerText = i;
+        pageButton.onclick = () => loadSongs(songs, i);
+        paginationContainer.appendChild(pageButton);
+      }
+    }
+
+    function playSong(songId, fromLikedSongs = false) {
+      const song = fromLikedSongs ? likedSongs.find(song => song.id === songId) : songs.find(song => song.id === songId);
+      if (!song) return;
+
+      currentSongIndex = fromLikedSongs ? likedSongs.findIndex(s => s.id === song.id) : songs.findIndex(s => s.id === song.id);
+      isPlayingLikedSongs = fromLikedSongs;
+
+      audio.src = `./assets/songs/${song.id}.mp3`;
+      songImage.src = `./assets/images/${song.id}.jpeg`;
+      songTitle.innerText = song.title;
+      songArtist.innerText = song.artist;
+      playPauseButton.innerHTML = '<ion-icon name="pause"></ion-icon>';
+
+      updateMediaSession(song);
+
+      isPlaying = true;
+      audio.play();
+    }
+
+    function updateMediaSession(song) {
+      if ('mediaSession' in navigator) {
+        navigator.mediaSession.metadata = new MediaMetadata({
+          title: song.title,
+          artist: song.artist,
+          album: '',
+          artwork: [
+            { src: songImage.src, sizes: '640x640', type: 'image/jpeg' },
+            { src: defaultImage, sizes: '128x128', type: 'image/jpeg' }
+          ]
+        });
+
+        navigator.mediaSession.setActionHandler('play', handlePlayPause);
+        navigator.mediaSession.setActionHandler('pause', handlePlayPause);
+        navigator.mediaSession.setActionHandler('previoustrack', playPrevSong);
+        navigator.mediaSession.setActionHandler('nexttrack', playNextSong);
+      }
+    }
+
+    function handlePlayPause() {
+      if (isPlaying) {
+        audio.pause();
+        playPauseButton.innerHTML = '<ion-icon name="play"></ion-icon>';
+        isPlaying = false;
+      } else {
+        audio.play();
+        playPauseButton.innerHTML = '<ion-icon name="pause"></ion-icon>';
+        isPlaying = true;
+      }
+    }
+
+    function playNextSong() {
+      const currentIndex = isPlayingLikedSongs ? currentSongIndex : currentSongIndex;
+      const songList = isPlayingLikedSongs ? likedSongs : songs;
+
+      if (currentIndex >= 0 && currentIndex < songList.length - 1) {
+        playSong(songList[currentIndex + 1].id, isPlayingLikedSongs);
+      }
+    }
+
+    function playPrevSong() {
+      const currentIndex = isPlayingLikedSongs ? currentSongIndex : currentSongIndex;
+      const songList = isPlayingLikedSongs ? likedSongs : songs;
+
+      if (currentIndex > 0) {
+        playSong(songList[currentIndex - 1].id, isPlayingLikedSongs);
+      }
+    }
+
+    function updateProgressBar() {
+      if (audio.duration) {
+        progress.value = (audio.currentTime / audio.duration) * 100;
+      }
+
+      if (audio.ended) {
+        playNextSong();
+      }
+    }
 
     function loadOfflineSongs() {
       const offlineSongsContainer = document.getElementById('offline-songs-container');
@@ -87,7 +202,7 @@
           cachedRequests.forEach(request => {
             const songId = request.url.split('/').pop().replace('.mp3', '');
             console.log('Song ID from request:', songId);
-            
+
             const song = songs.find(s => s.id === songId);
             console.log('Found song:', song);
 
@@ -97,18 +212,18 @@
               songItem.id = song.id;
 
               songItem.innerHTML = `
-                <div class="song-item-left">
-                  <button onclick="playSong('${song.id}', false)">
-                    <ion-icon name="play"></ion-icon>
-                  </button>
-                  <img src="./assets/images/${song.id}.jpeg" alt="${song.title}">
-                  <div class="song-item-info">
-                    <p class="song-title">${song.title}</p>
-                    <p class="song-artist">${song.artist}</p>
-                  </div>
+              <div class="song-item-left">
+                <button onclick="playSong('${song.id}', false)">
+                  <ion-icon name="play"></ion-icon>
+                </button>
+                <img src="./assets/images/${song.id}.jpeg" alt="${song.title}">
+                <div class="song-item-info">
+                  <p class="song-title">${song.title}</p>
+                  <p class="song-artist">${song.artist}</p>
                 </div>
-              `;
-              
+              </div>
+            `;
+
               offlineSongsContainer.appendChild(songItem);
               console.log('Appended song item to offline container:', songItem);
             } else {
@@ -122,8 +237,18 @@
         console.error('Error opening cache:', error);
       });
     }
-    
-    loadOfflineSongs();
+
+    audio.addEventListener('timeupdate', updateProgressBar);
+    progress.addEventListener('input', () => {
+      const progressValue = progress.value;
+      const duration = audio.duration || 0;
+      audio.currentTime = (progressValue / 100) * duration;
+    });
+    playPauseButton.addEventListener('click', handlePlayPause);
+    document.getElementById('next-song').addEventListener('click', playNextSong);
+    document.getElementById('prev-song').addEventListener('click', playPrevSong);
+
+    fetchSongs();
   </script>
   <script src="./js/app.js"></script>
 </body>

@@ -274,6 +274,56 @@ function removeFromLikedSongs(index) {
   loadLikedSongs();
 }
 
+function loadOfflineSongs() {
+  const offlineSongsContainer = document.getElementById('offline-songs-container');
+  offlineSongsContainer.innerHTML = '';
+
+  caches.open(CACHE_NAME).then(cache => {
+    console.log('Cache opened:', cache);
+
+    cache.keys().then(cachedRequests => {
+      console.log('Cached requests:', cachedRequests);
+
+      cachedRequests.forEach(request => {
+        const songId = request.url.split('/').pop().replace('.mp3', '');
+        console.log('Song ID from request:', songId);
+
+        const song = songs.find(s => s.id === songId);
+        console.log('Found song:', song);
+
+        if (song) {
+          const songItem = document.createElement('div');
+          songItem.className = 'song-item';
+          songItem.id = song.id;
+
+          songItem.innerHTML = `
+                <div class="song-item-left">
+                  <button onclick="playSong('${song.id}', false)">
+                    <ion-icon name="play"></ion-icon>
+                  </button>
+                  <img src="./assets/images/${song.id}.jpeg" alt="${song.title}">
+                  <div class="song-item-info">
+                    <p class="song-title">${song.title}</p>
+                    <p class="song-artist">${song.artist}</p>
+                  </div>
+                </div>
+              `;
+
+          offlineSongsContainer.appendChild(songItem);
+          console.log('Appended song item to offline container:', songItem);
+        } else {
+          console.log('No song found for ID:', songId);
+        }
+      });
+    }).catch(error => {
+      console.error('Error fetching cached requests:', error);
+    });
+  }).catch(error => {
+    console.error('Error opening cache:', error);
+  });
+}
+
+
 audio.addEventListener('timeupdate', updateProgressBar);
 progress.addEventListener('input', () => {
   const progressValue = progress.value;
