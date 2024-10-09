@@ -340,7 +340,8 @@ a:hover {
   border-radius: 20px;
 }
 
-#liked-songs-container {
+#liked-songs-container, 
+#offline-songs-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
