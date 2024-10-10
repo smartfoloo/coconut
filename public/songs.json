@@ -10,6 +10,11 @@
     "artist": "The Weeknd, Playboi Carti"
   },
   {
+    "title": "Dancing In The Flames",
+    "id": "dancing-in-the-flames",
+    "artist": "The Weeknd"
+  },
+  {
     "title": "BAND4BAND",
     "id": "band4band",
     "artist": "Central Cee, Lil Baby"
@@ -250,6 +255,16 @@
     "artist": "DAZBEE, Vaundy"
   },
   {
+    "title": "縫い目",
+    "id": "縫い目",
+    "artist": "上野大樹"
+  },
+  {
+    "title": "満ちてゆく",
+    "id": "満ちてゆく",
+    "artist": "Fujii Kaze"
+  },
+  {
     "title": "白日",
     "id": "白日",
     "artist": "King Gnu"
@@ -355,6 +370,11 @@
     "artist": "OFFICIAL HIGE DANDISM"
   },
   {
+    "title": "Hello",
+    "id": "hello",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
     "title": "Universe",
     "id": "universe",
     "artist": "OFFICIAL HIGE DANDISM"
@@ -418,6 +438,11 @@
     "title": "rendez vous",
     "id": "rendez-vous",
     "artist": "shytaupe"
+  },
+  {
+    "title": "愛し君へ",
+    "id": "愛し君へ",
+    "artist": "GReeeen"
   },
   {
     "title": "Tomorrow never knows",
