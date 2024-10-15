@@ -40,6 +40,11 @@
     "artist": "Yeat"
   },
   {
+    "title": "CARNIVAL (feat. Rich The Kid, Playboi Carti)",
+    "id": "carnival-(feat.-rich-the-kid,-playboi-carti)",
+    "artist": "¥$, Kanye West, Ty Dolla $ign, Rich The Kid, Playboi Carti"
+  },
+  {
     "title": "Popular (with Playboi Carti & Madonna)",
     "id": "popular-(with-playboi-carti-&-madonna)",
     "artist": "The Weeknd, Playboi Carti, Madonna"
@@ -108,6 +113,11 @@
     "title": "Chemical",
     "id": "chemical",
     "artist": "Post Malone"
+  },
+  {
+    "title": "BIRDS OF A FEATHER",
+    "id": "birds-of-a-feather",
+    "artist": "Billie Eilish"
   },
   {
     "title": "Blueberry Faygo",
@@ -380,6 +390,11 @@
     "artist": "OFFICIAL HIGE DANDISM"
   },
   {
+    "title": "Same Blue",
+    "id": "same-blue",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
     "title": "Tattoo",
     "id": "tattoo",
     "artist": "OFFICIAL HIGE DANDISM"
@@ -423,6 +438,16 @@
     "title": "フライデー・ナイト",
     "id": "フライデー・ナイト",
     "artist": "natori"
+  },
+  {
+    "title": "波まかせ",
+    "id": "波まかせ",
+    "artist": "AKASAKI"
+  },
+  {
+    "title": "ブルーベリー・ナイツ",
+    "id": "ブルーベリー・ナイツ",
+    "artist": "Macaroni Empitsu"
   },
   {
     "title": "まちがいさがし",
