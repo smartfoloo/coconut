@@ -10,6 +10,16 @@
     "artist": "The Weeknd, Playboi Carti"
   },
   {
+    "title": "FIELD TRIP",
+    "id": "field-trip",
+    "artist": "¥$, Playboi Carti, Don Toliver, Kodak Black"
+  },
+  {
+    "title": "Type Shit",
+    "id": "type-shit",
+    "artist": "Future, Metro Boomin, Travis Scott, Playboi Carti"
+  },
+  {
     "title": "Dancing In The Flames",
     "id": "dancing-in-the-flames",
     "artist": "The Weeknd"
@@ -33,6 +43,16 @@
     "title": "I Had Some Help (feat. Morgan Wallen)",
     "id": "i-had-some-help-(feat.-morgan-wallen)",
     "artist": "Post Malone, Morgan Wallen"
+  },
+  {
+    "title": "A Bar Song (Tipsy)",
+    "id": "a-bar-song-(tipsy)",
+    "artist": "Shaboozey"
+  },
+  {
+    "title": "We Still Don't Trust You",
+    "id": "we-still-dont-trust-you",
+    "artist": "Future, Metro Boomin, The Weeknd"
   },
   {
     "title": "If We Being Rëal",
@@ -303,6 +323,11 @@
     "title": "どうして",
     "id": "どうして",
     "artist": "TakaseToya, emi noda"
+  },
+  {
+    "title": "青のすみか",
+    "id": "青のすみか",
+    "artist": "Tatsuya Kitani"
   },
   {
     "title": "Sparkle",

@@ -365,10 +365,45 @@ a:hover {
 }
 
 #liked-songs-container, 
-#offline-songs-container {
+#offline-songs-container,
+#uploaded-songs {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+/* Upload Songs */
+
+.upload-song-button {
+  height: 100%;
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.upload-circle {
+  width: 200px;
+  height: 200px;
+  background: var(--background3);
+  border-radius: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 100ms;
+}
+
+.upload-circle:hover {
+  transform: scale(1.05);
+}
+
+.upload-circle ion-icon {
+  font-size: 60px;
 }
 
 @media screen and (max-width: 1200px) {

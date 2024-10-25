@@ -274,6 +274,60 @@ function removeFromLikedSongs(index) {
   loadLikedSongs();
 }
 
+let uploadedSongs = JSON.parse(localStorage.getItem('uploadedSongs')) || [];
+
+function loadUploadedSongs() {
+  const uploadedSongsContainer = document.getElementById('uploaded-songs');
+  uploadedSongsContainer.innerHTML = '';
+
+  uploadedSongs.forEach(song => {
+    const songItem = document.createElement('div');
+    songItem.className = 'song-item';
+    songItem.id = song.id;
+
+    songItem.innerHTML = `
+      <div class="song-item-left">
+        <button onclick="playUploadedSong('${song.id}')">
+          <ion-icon name="play"></ion-icon>
+        </button>
+        <img src="${song.imageUrl}" alt="${song.title}">
+        <div class="song-item-info">
+          <p class="song-title">${song.title}</p>
+          <p class="song-artist">${song.artist}</p>
+        </div>
+      </div>
+      <div class="song-item-right">
+        <button onclick="removeUploadedSong('${song.id}')">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+    `;
+
+    uploadedSongsContainer.appendChild(songItem);
+  });
+}
+
+function playUploadedSong(songId) {
+  const song = uploadedSongs.find(song => song.id === songId);
+  if (!song) return;
+
+  audio.src = song.fileUrl;
+  songImage.src = song.imageUrl;
+  songTitle.innerText = song.title;
+  songArtist.innerText = song.artist;
+  playPauseButton.innerHTML = '<ion-icon name="pause"></ion-icon>';
+
+  isPlaying = true;
+  audio.play();
+}
+
+function removeUploadedSong(songId) {
+  uploadedSongs = uploadedSongs.filter(song => song.id !== songId);
+  localStorage.setItem('uploadedSongs', JSON.stringify(uploadedSongs));
+  loadUploadedSongs();
+}
+
+
 function loadOfflineSongs() {
   const offlineSongsContainer = document.getElementById('offline-songs-container');
   offlineSongsContainer.innerHTML = '';
@@ -323,6 +377,7 @@ function loadOfflineSongs() {
   });
 }
 
+fetchSongs();
 
 audio.addEventListener('timeupdate', updateProgressBar);
 progress.addEventListener('input', () => {
@@ -334,4 +389,48 @@ playPauseButton.addEventListener('click', handlePlayPause);
 document.getElementById('next-song').addEventListener('click', playNextSong);
 document.getElementById('prev-song').addEventListener('click', playPrevSong);
 
-fetchSongs();
+document.getElementById('upload-song-button').addEventListener('click', () => {
+  const songFileInput = document.createElement('input');
+  songFileInput.type = 'file';
+  songFileInput.accept = '.mp3';
+  
+  songFileInput.click();
+
+  songFileInput.onchange = function () {
+    const songFile = songFileInput.files[0];
+
+    if (!songFile) {
+      alert('Please select an MP3 file.');
+      return;
+    }
+
+    var songTitle = prompt('Enter the song title:');
+    var songArtist = prompt('Enter the artist name:');
+    var songImage = prompt('Enter the image URL (optional):', defaultImage);
+
+    if (!songTitle || !songArtist) {
+      alert('Please provide the song title and artist.');
+      return;
+    }
+
+    const songId = `uploaded_${Date.now()}`;
+    const songUrl = URL.createObjectURL(songFile);
+
+    const newSong = {
+      id: songId,
+      title: songTitle,
+      artist: songArtist,
+      imageUrl: songImage || defaultImage,
+      fileUrl: songUrl
+    };
+    uploadedSongs.push(newSong);
+
+    localStorage.setItem('uploadedSongs', JSON.stringify(uploadedSongs));
+
+    loadUploadedSongs();
+  };
+});
+
+if (window.location.pathname.endsWith('upload.html')) {
+  loadUploadedSongs();
+}
