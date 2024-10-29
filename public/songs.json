@@ -165,6 +165,11 @@
     "artist": "KSI, Trippie Redd"
   },
   {
+    "title": "Low",
+    "id": "low",
+    "artist": "KSI"
+  },
+  {
     "title": "Brave",
     "id": "brave",
     "artist": "こーじゅん"
@@ -178,6 +183,11 @@
     "title": "STAY (with Justin Bieber)",
     "id": "stay-(with-justin-bieber)",
     "artist": "The Kid LAROI, Justin Bieber"
+  },
+  {
+    "title": "SELFISH",
+    "id": "selfish",
+    "artist": "The Kid LAROI"
   },
   {
     "title": "End of Beginning",
@@ -497,6 +507,11 @@
   {
     "title": "キセキ",
     "id": "キセキ",
+    "artist": "GReeeen"
+  },
+  {
+    "title": "pride",
+    "id": "pride",
     "artist": "GReeeen"
   },
   {
