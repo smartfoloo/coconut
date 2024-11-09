@@ -45,6 +45,11 @@
     "artist": "Post Malone, Morgan Wallen"
   },
   {
+    "title": "Love Somebody",
+    "id": "love-somebody",
+    "artist": "Morgan Wallen"
+  },
+  {
     "title": "A Bar Song (Tipsy)",
     "id": "a-bar-song-(tipsy)",
     "artist": "Shaboozey"
@@ -245,6 +250,11 @@
     "artist": "snackrunner"
   },
   {
+    "title": "Bohemian Rhapsody",
+    "id": "bohemian-rhapsody",
+    "artist": "Queen"
+  },
+  {
     "title": "Forever Young",
     "id": "forever-young",
     "artist": "Alphaville"
@@ -300,6 +310,11 @@
     "artist": "Vaundy"
   },
   {
+    "title": "風神",
+    "id": "風神",
+    "artist": "Vaundy"
+  },
+  {
     "title": "odoriko dazbee cover",
     "id": "odoriko-dazbee-cover",
     "artist": "DAZBEE, Vaundy"
@@ -317,6 +332,11 @@
   {
     "title": "白日",
     "id": "白日",
+    "artist": "King Gnu"
+  },
+  {
+    "title": "ねっこ",
+    "id": "ねっこ",
     "artist": "King Gnu"
   },
   {
@@ -442,6 +462,11 @@
   {
     "title": "Same Blue",
     "id": "same-blue",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
+    "title": "Sharon",
+    "id": "sharon",
     "artist": "OFFICIAL HIGE DANDISM"
   },
   {
