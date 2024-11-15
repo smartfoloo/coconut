@@ -255,6 +255,66 @@
     "artist": "Queen"
   },
   {
+    "title": "Let It Be - Remastered 2009",
+    "id": "let-it-be",
+    "artist": "The Beatles"
+  },
+  {
+    "title": "Take on Me",
+    "id": "take-on-me",
+    "artist": "a-ha"
+  },
+  {
+    "title": "Separate Ways (Worlds Apart)[2023 Remaster]",
+    "id": "separate-ways",
+    "artist": "Journey"
+  },
+  {
+    "title": "Don't Stop Believin' (2022 Remaster)",
+    "id": "dont-stop-believin",
+    "artist": "Journey"
+  },
+  {
+    "title": "Everlasting Love",
+    "id": "everlasting-love",
+    "artist": "Howard Jones"
+  },
+  {
+    "title": "Every Breath You Take",
+    "id": "every-breath-you-take",
+    "artist": "The Police"
+  },
+  {
+    "title": "I'm Still Standing",
+    "id": "im-still-standing",
+    "artist": "Elton John"
+  },
+  {
+    "title": "Private Eyes",
+    "id": "private-eyes",
+    "artist": "Daryl Hall & John Oates"
+  },
+  {
+    "title": "Kyrie",
+    "id": "kyrie",
+    "artist": "Mr.Mister"
+  },
+  {
+    "title": "Runaway",
+    "id": "runaway",
+    "artist": "Bon Jovi"
+  },
+  {
+    "title": "We Didn't Start the Fire",
+    "id": "we-didnt-start-the-fire",
+    "artist": "Billy Joel"
+  },
+  {
+    "title": "Piano Man",
+    "id": "piano-man",
+    "artist": "Billy Joel"
+  },
+  {
     "title": "Forever Young",
     "id": "forever-young",
     "artist": "Alphaville"
