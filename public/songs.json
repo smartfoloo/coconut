@@ -100,6 +100,11 @@
     "artist": "Megan Thee Stallion, Yuki Chiba"
   },
   {
+    "title": "Here's Your Perfect",
+    "id": "heres-your-perfect",
+    "artist": "Jamie Miller"
+  },
+  {
     "title": "Hope",
     "id": "hope",
     "artist": "XXXTENTACION"
@@ -168,6 +173,11 @@
     "title": "kompa pasión",
     "id": "kompa-pasión",
     "artist": "фрози, joyful"
+  },
+  {
+    "title": "Perfect",
+    "id": "perfect",
+    "artist": "Ed Sheeran"
   },
   {
     "title": "Thick Of It (feat. Trippie Redd)",
@@ -350,6 +360,11 @@
     "artist": "Mrs. GREEN APPLE"
   },
   {
+    "title": "hanataba",
+    "id": "hanataba",
+    "artist": "milet"
+  },
+  {
     "title": "怪獣の花唄",
     "id": "怪獣の花唄",
     "artist": "Vaundy"
@@ -440,6 +455,11 @@
     "artist": "RADWIMPS"
   },
   {
+    "title": "モノトーン",
+    "id": "モノトーン",
+    "artist": "YOASOBI"
+  },
+  {
     "title": "怪物",
     "id": "怪物",
     "artist": "YOASOBI"
@@ -472,6 +492,11 @@
   {
     "title": "アンコール",
     "id": "アンコール",
+    "artist": "YOASOBI"
+  },
+  {
+    "title": "三原色",
+    "id": "三原色",
     "artist": "YOASOBI"
   },
   {
