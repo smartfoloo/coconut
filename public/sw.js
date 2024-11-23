@@ -11,7 +11,7 @@ self.addEventListener('install', event => {
         '/songs.json',
         '/js/app.js',
         '/css/global.css',
-        '/assets/favion.png',
+        '/assets/favicon.png',
         '/assets/default.png'
       ]);
     })
