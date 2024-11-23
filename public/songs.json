@@ -100,8 +100,18 @@
     "artist": "Megan Thee Stallion, Yuki Chiba"
   },
   {
+    "title": "soak city (do it)",
+    "id": "soak-city-(do-it)",
+    "artist": "310babii"
+  },
+  {
     "title": "Here's Your Perfect",
     "id": "heres-your-perfect",
+    "artist": "Jamie Miller"
+  },
+  {
+    "title": "It Is What It Is",
+    "id": "it-is-what-it-is",
     "artist": "Jamie Miller"
   },
   {
@@ -133,6 +143,11 @@
     "title": "WALK UP",
     "id": "walk-up",
     "artist": "Mills"
+  },
+  {
+    "title": "Perfect",
+    "id": "perfect",
+    "artist": "Ed Sheeran"
   },
   {
     "title": "Beautiful Things",
@@ -175,11 +190,6 @@
     "artist": "фрози, joyful"
   },
   {
-    "title": "Perfect",
-    "id": "perfect",
-    "artist": "Ed Sheeran"
-  },
-  {
     "title": "Thick Of It (feat. Trippie Redd)",
     "id": "thick-of-it-(feat.-trippie-redd)",
     "artist": "KSI, Trippie Redd"
@@ -203,6 +213,11 @@
     "title": "STAY (with Justin Bieber)",
     "id": "stay-(with-justin-bieber)",
     "artist": "The Kid LAROI, Justin Bieber"
+  },
+  {
+    "title": "TOO MUCH",
+    "id": "too-much",
+    "artist": "The Kid LAROI"
   },
   {
     "title": "SELFISH",
@@ -352,6 +367,11 @@
   {
     "title": "Dramaturgy",
     "id": "dramaturgy",
+    "artist": "Eve"
+  },
+  {
+    "title": "Teenage Blue",
+    "id": "teenage-blue",
     "artist": "Eve"
   },
   {
