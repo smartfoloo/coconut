@@ -1,13 +1,18 @@
 [
   {
-    "title": "FE!N (feat. Playboi Carti)",
-    "id": "fe!n-(feat.-playboi-carti)",
-    "artist": "Travis Scott, Playboi Carti"
+    "title": "luther (with sza)",
+    "id": "luther-(with-sza)",
+    "artist": "Kendrick Lamar, sza"
   },
   {
     "title": "Timeless (with Playboi Carti)",
     "id": "timeless-(with-playboi-carti)",
     "artist": "The Weeknd, Playboi Carti"
+  },
+  {
+    "title": "FE!N (feat. Playboi Carti)",
+    "id": "fe!n-(feat.-playboi-carti)",
+    "artist": "Travis Scott, Playboi Carti"
   },
   {
     "title": "FIELD TRIP",
@@ -120,6 +125,11 @@
     "artist": "Juice WRLD"
   },
   {
+    "title": "Empty Out Your Pockets",
+    "id": "empty-out-your-pockets",
+    "artist": "Juice WRLD"
+  },
+  {
     "title": "Hope",
     "id": "hope",
     "artist": "XXXTENTACION"
@@ -148,6 +158,16 @@
     "title": "WALK UP",
     "id": "walk-up",
     "artist": "Mills"
+  },
+  {
+    "title": "Sign of the Times",
+    "id": "sign-of-the-times",
+    "artist": "Harry Styles"
+  },
+  {
+    "title": "Someone You Loved",
+    "id": "someone-you-loved",
+    "artist": "Lewis Capaldi"
   },
   {
     "title": "Perfect",
