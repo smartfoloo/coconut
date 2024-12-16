@@ -80,6 +80,16 @@
     "artist": "The Weeknd, Playboi Carti, Madonna"
   },
   {
+    "title": "One Of The Girls (with JENNIE, Lily Rose Depp)",
+    "id": "one-of-the-girls",
+    "artist": "The Weeknd, JENNIE, Lily-Rose Depp"
+  },
+  {
+    "title": "Power is Power (feat. The Weeknd & Travis Scott)",
+    "id": "power-is-power",
+    "artist": "SZA, The Weeknd, Travis Scott, Game of Thrones"
+  },
+  {
     "title": "Die With A Smile",
     "id": "die-with-a-smile",
     "artist": "Lady Gaga, Bruno Mars"
@@ -118,6 +128,11 @@
     "title": "It Is What It Is",
     "id": "it-is-what-it-is",
     "artist": "Jamie Miller"
+  },
+  {
+    "title": "Sunroof",
+    "id": "sunroof",
+    "artist": "Nicky Youre, dazy"
   },
   {
     "title": "Lucid Dreams",
@@ -170,9 +185,24 @@
     "artist": "Lewis Capaldi"
   },
   {
+    "title": "Die For You",
+    "id": "die-for-you",
+    "artist": "The Weeknd"
+  },
+  {
+    "title": "Shape of You",
+    "id": "shape-of-you",
+    "artist": "Ed Sheeran"
+  },
+  {
     "title": "Perfect",
     "id": "perfect",
     "artist": "Ed Sheeran"
+  },
+  {
+    "title": "Brother",
+    "id": "brother",
+    "artist": "Kodaline"
   },
   {
     "title": "Beautiful Things",
