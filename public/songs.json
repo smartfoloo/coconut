@@ -135,6 +135,11 @@
     "artist": "Nicky Youre, dazy"
   },
   {
+    "title": "Eyes On You",
+    "id": "eyes-on-you",
+    "artist": "Nicky Youre"
+  },
+  {
     "title": "Lucid Dreams",
     "id": "lucid-dreams",
     "artist": "Juice WRLD"
@@ -185,6 +190,16 @@
     "artist": "Lewis Capaldi"
   },
   {
+    "title": "Blinding Lights",
+    "id": "blinding-lights",
+    "artist": "The Weeknd"
+  },
+  {
+    "title": "Save Your Tears",
+    "id": "save-your-tears",
+    "artist": "The Weeknd"
+  },
+  {
     "title": "Die For You",
     "id": "die-for-you",
     "artist": "The Weeknd"
@@ -203,6 +218,16 @@
     "title": "Brother",
     "id": "brother",
     "artist": "Kodaline"
+  },
+  {
+    "title": "rockstar (feat. 21 Savage)",
+    "id": "rockstar",
+    "artist": "Post Malone, 21 Savage"
+  },
+  {
+    "title": "Sunflower - Spider-Man: Into the Spider-Verse",
+    "id": "sunflower",
+    "artist": "Post Malone, Swae Lee"
   },
   {
     "title": "Beautiful Things",
@@ -435,9 +460,19 @@
     "artist": "Mrs. GREEN APPLE"
   },
   {
+    "title": "Azalea",
+    "id": "azalea",
+    "artist": "Kenshi Yonezu"
+  },
+  {
     "title": "hanataba",
     "id": "hanataba",
     "artist": "milet"
+  },
+  {
+    "title": "絆ノ奇跡",
+    "id": "絆ノ奇跡",
+    "artist": "MAN WITH A MISSION, milet"
   },
   {
     "title": "怪獣の花唄",
@@ -492,6 +527,11 @@
   {
     "title": "水平線",
     "id": "水平線",
+    "artist": "back number"
+  },
+  {
+    "title": "ヒロイン",
+    "id": "ヒロイン",
     "artist": "back number"
   },
   {
