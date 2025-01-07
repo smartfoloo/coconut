@@ -150,6 +150,11 @@
     "artist": "Juice WRLD"
   },
   {
+    "title": "Wishing Well",
+    "id": "wishing-well",
+    "artist": "Juice WRLD"
+  },
+  {
     "title": "Hope",
     "id": "hope",
     "artist": "XXXTENTACION"
@@ -178,6 +183,11 @@
     "title": "WALK UP",
     "id": "walk-up",
     "artist": "Mills"
+  },
+  {
+    "title": "Like I Do",
+    "id": "like-i-do",
+    "artist": "J. Tajor"
   },
   {
     "title": "Sign of the Times",
@@ -563,6 +573,16 @@
     "title": "青のすみか",
     "id": "青のすみか",
     "artist": "Tatsuya Kitani"
+  },
+  {
+    "title": "ジターバグ",
+    "id": "ジターバグ",
+    "artist": "ELLEGARDEN"
+  },
+  {
+    "title": "風の日",
+    "id": "風の日",
+    "artist": "ELLEGARDEN"
   },
   {
     "title": "Sparkle",
