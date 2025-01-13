@@ -225,6 +225,11 @@
     "artist": "Ed Sheeran"
   },
   {
+    "title": "Bad Habits",
+    "id": "bad-habits",
+    "artist": "Ed Sheeran"
+  },
+  {
     "title": "Brother",
     "id": "brother",
     "artist": "Kodaline"
@@ -475,6 +480,11 @@
     "artist": "Mrs. GREEN APPLE"
   },
   {
+    "title": "青と夏",
+    "id": "青と夏",
+    "artist": "Mrs. GREEN APPLE"
+  },
+  {
     "title": "Azalea",
     "id": "azalea",
     "artist": "Kenshi Yonezu"
@@ -573,6 +583,11 @@
     "title": "青のすみか",
     "id": "青のすみか",
     "artist": "Tatsuya Kitani"
+  },
+  {
+    "title": "サザンカ",
+    "id": "サザンカ",
+    "artist": "SEKAI NO OWARI"
   },
   {
     "title": "ジターバグ",
