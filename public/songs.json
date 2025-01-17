@@ -5,9 +5,19 @@
     "artist": "Kendrick Lamar, sza"
   },
   {
+    "title": "APT.",
+    "id": "apt",
+    "artist": "ROSÉ, Bruno Mars"
+  },
+  {
     "title": "Timeless (with Playboi Carti)",
     "id": "timeless-(with-playboi-carti)",
     "artist": "The Weeknd, Playboi Carti"
+  },
+  {
+    "title": "DtMF",
+    "id": "dtmf",
+    "artist": "Bad Bunny"
   },
   {
     "title": "FE!N (feat. Playboi Carti)",
@@ -120,16 +130,6 @@
     "artist": "310babii"
   },
   {
-    "title": "Here's Your Perfect",
-    "id": "heres-your-perfect",
-    "artist": "Jamie Miller"
-  },
-  {
-    "title": "It Is What It Is",
-    "id": "it-is-what-it-is",
-    "artist": "Jamie Miller"
-  },
-  {
     "title": "Sunroof",
     "id": "sunroof",
     "artist": "Nicky Youre, dazy"
@@ -165,29 +165,19 @@
     "artist": "XXXTENTACION"
   },
   {
-    "title": "Ransom",
-    "id": "ransom",
-    "artist": "Lil Tecca"
+    "title": "Bling-Bang-Bang-Born",
+    "id": "bling-bang-bang-born",
+    "artist": "Creepy Nuts"
   },
   {
-    "title": "Double Life",
-    "id": "double-life",
-    "artist": "Pharell Williams"
+    "title": "Magnetic",
+    "id": "magnetic",
+    "artist": "ILLIT"
   },
   {
-    "title": "Too Sweet",
-    "id": "too-sweet",
-    "artist": "Hozier"
-  },
-  {
-    "title": "WALK UP",
-    "id": "walk-up",
-    "artist": "Mills"
-  },
-  {
-    "title": "Like I Do",
-    "id": "like-i-do",
-    "artist": "J. Tajor"
+    "title": "Strawberries & Cigarettes",
+    "id": "strawberries-&-cigarettes",
+    "artist": "Troye Sivan"
   },
   {
     "title": "Sign of the Times",
@@ -230,11 +220,6 @@
     "artist": "Ed Sheeran"
   },
   {
-    "title": "Brother",
-    "id": "brother",
-    "artist": "Kodaline"
-  },
-  {
     "title": "rockstar (feat. 21 Savage)",
     "id": "rockstar",
     "artist": "Post Malone, 21 Savage"
@@ -265,14 +250,49 @@
     "artist": "Billie Eilish"
   },
   {
-    "title": "Stars Will Align",
-    "id": "stars-will-align",
-    "artist": "Kygo, Imagine Dragons"
+    "title": "Here's Your Perfect",
+    "id": "heres-your-perfect",
+    "artist": "Jamie Miller"
+  },
+  {
+    "title": "It Is What It Is",
+    "id": "it-is-what-it-is",
+    "artist": "Jamie Miller"
   },
   {
     "title": "Blueberry Faygo",
     "id": "blueberry-faygo",
     "artist": "Lil Mosey"
+  },
+  {
+    "title": "Ransom",
+    "id": "ransom",
+    "artist": "Lil Tecca"
+  },
+  {
+    "title": "Double Life",
+    "id": "double-life",
+    "artist": "Pharell Williams"
+  },
+  {
+    "title": "Brother",
+    "id": "brother",
+    "artist": "Kodaline"
+  },
+  {
+    "title": "Too Sweet",
+    "id": "too-sweet",
+    "artist": "Hozier"
+  },
+  {
+    "title": "WALK UP",
+    "id": "walk-up",
+    "artist": "Mills"
+  },
+  {
+    "title": "Like I Do",
+    "id": "like-i-do",
+    "artist": "J. Tajor"
   },
   {
     "title": "In My Head",
