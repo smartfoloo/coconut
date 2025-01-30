@@ -515,6 +515,11 @@
     "artist": "Mrs. GREEN APPLE"
   },
   {
+    "title": "familie",
+    "id": "familie",
+    "artist": "Mrs. GREEN APPLE"
+  },
+  {
     "title": "幾億光年",
     "id": "幾億光年",
     "artist": "Omoinotake"
@@ -628,11 +633,6 @@
     "title": "Zenzenzense",
     "id": "zenzenzense",
     "artist": "RADWIMPS"
-  },
-  {
-    "title": "モノトーン",
-    "id": "モノトーン",
-    "artist": "YOASOBI"
   },
   {
     "title": "怪物",
@@ -755,21 +755,6 @@
     "artist": "Vaundy"
   },
   {
-    "title": "しわあわせ",
-    "id": "しわあわせ",
-    "artist": "Vaundy"
-  },
-  {
-    "title": "風神",
-    "id": "風神",
-    "artist": "Vaundy"
-  },
-  {
-    "title": "ヒロイン",
-    "id": "ヒロイン",
-    "artist": "back number"
-  },
-  {
     "title": "エメラルド",
     "id": "エメラルド",
     "artist": "back number"
@@ -793,11 +778,6 @@
     "title": "フライデー・ナイト",
     "id": "フライデー・ナイト",
     "artist": "natori"
-  },
-  {
-    "title": "波まかせ",
-    "id": "波まかせ",
-    "artist": "AKASAKI"
   },
   {
     "title": "ブルーベリー・ナイツ",
