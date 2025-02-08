@@ -15,6 +15,11 @@
     "artist": "Travis Scott"
   },
   {
+    "title": "Cry For Me",
+    "id": "cry-for-me",
+    "artist": "The Weeknd"
+  },
+  {
     "title": "Timeless (with Playboi Carti)",
     "id": "timeless-(with-playboi-carti)",
     "artist": "The Weeknd, Playboi Carti"
@@ -43,6 +48,11 @@
     "title": "Not Like Us",
     "id": "not-like-us",
     "artist": "Kendrick Lamar"
+  },
+  {
+    "title": "All The Stars (with SZA)",
+    "id": "all-the-stars",
+    "artist": "Kendrick Lamar, SZA"
   },
   {
     "title": "I Had Some Help (feat. Morgan Wallen)",
@@ -110,6 +120,11 @@
     "artist": "Juice WRLD"
   },
   {
+    "title": "The Box",
+    "id": "the-box",
+    "artist": "Roddy Ricch"
+  },
+  {
     "title": "STAY (with Justin Bieber)",
     "id": "stay-(with-justin-bieber)",
     "artist": "The Kid LAROI, Justin Bieber"
@@ -133,6 +148,11 @@
     "title": "Sad",
     "id": "sad",
     "artist": "XXXTENTACION"
+  },
+  {
+    "title": "Sailor Song",
+    "id": "sailor-song",
+    "artist": "Gigi Perez"
   },
   {
     "title": "Bling-Bang-Bang-Born",
@@ -178,6 +198,11 @@
     "title": "BIRDS OF A FEATHER",
     "id": "birds-of-a-feather",
     "artist": "Billie Eilish"
+  },
+  {
+    "title": "As It Was",
+    "id": "as-it-was",
+    "artist": "Harry Styles"
   },
   {
     "title": "Sign of the Times",
