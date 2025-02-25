@@ -70,9 +70,19 @@
     "artist": "Kendrick Lamar, SZA"
   },
   {
-    "title": "CARNIVAL (feat. Rich The Kid, Playboi Carti)",
-    "id": "carnival-(feat.-rich-the-kid,-playboi-carti)",
-    "artist": "¥$, Kanye West, Ty Dolla $ign, Rich The Kid, Playboi Carti"
+    "title": "Truth In The Lies (feat. Lil Durk)",
+    "id": "truth-in-the-lies",
+    "artist": "Central Cee, Lil Durk"
+  },
+  {
+    "title": "CRG (feat. Dave)",
+    "id": "crg",
+    "artist": "Central Cee, Dave"
+  },
+  {
+    "title": "Sprinter",
+    "id": "sprinter",
+    "artist": "Dave, Central Cee"
   },
   {
     "title": "Die With A Smile",
@@ -85,21 +95,6 @@
     "artist": "The Weeknd"
   },
   {
-    "title": "soak city (do it)",
-    "id": "soak-city-(do-it)",
-    "artist": "310babii"
-  },
-  {
-    "title": "PUFFIN ON ZOOTIEZ",
-    "id": "puffin-on-zootiez",
-    "artist": "Future"
-  },
-  {
-    "title": "Never Change",
-    "id": "never-change",
-    "artist": "Dustystaytrue"
-  },
-  {
     "title": "Outta Time",
     "id": "outta-time",
     "artist": "Killbunk, Dustystaytrue"
@@ -107,6 +102,16 @@
   {
     "title": "Lucid Dreams",
     "id": "lucid-dreams",
+    "artist": "Juice WRLD"
+  },
+  {
+    "title": "All Girls Are The Same",
+    "id": "all-girls-are-the-same",
+    "artist": "Juice WRLD"
+  },
+  {
+    "title": "Robbery",
+    "id": "robbery",
     "artist": "Juice WRLD"
   },
   {
@@ -135,16 +140,6 @@
     "artist": "The Kid LAROI, Justin Bieber"
   },
   {
-    "title": "TOO MUCH",
-    "id": "too-much",
-    "artist": "The Kid LAROI"
-  },
-  {
-    "title": "SELFISH",
-    "id": "selfish",
-    "artist": "The Kid LAROI"
-  },
-  {
     "title": "Hope",
     "id": "hope",
     "artist": "XXXTENTACION"
@@ -153,6 +148,16 @@
     "title": "Sad",
     "id": "sad",
     "artist": "XXXTENTACION"
+  },
+  {
+    "title": "TOO MUCH",
+    "id": "too-much",
+    "artist": "The Kid LAROI"
+  },
+  {
+    "title": "SELFISH",
+    "id": "selfish",
+    "artist": "The Kid LAROI"
   },
   {
     "title": "HUMBLE.",
@@ -210,6 +215,16 @@
     "artist": "Tommy Richman"
   },
   {
+    "title": "Overseas",
+    "id": "overseas",
+    "artist": "D-Block Europe, Central Cee"
+  },
+  {
+    "title": "Loading",
+    "id": "loading",
+    "artist": "Central Cee"
+  },
+  {
     "title": "Big Dawgs",
     "id": "big-dawgs",
     "artist": "Hanumankind, Halmi"
@@ -228,6 +243,21 @@
     "title": "TELESCOPE",
     "id": "telescope",
     "artist": "TWXN, LL Clawz, 507KAZ"
+  },
+  {
+    "title": "soak city (do it)",
+    "id": "soak-city-(do-it)",
+    "artist": "310babii"
+  },
+  {
+    "title": "PUFFIN ON ZOOTIEZ",
+    "id": "puffin-on-zootiez",
+    "artist": "Future"
+  },
+  {
+    "title": "CARNIVAL (feat. Rich The Kid, Playboi Carti)",
+    "id": "carnival-(feat.-rich-the-kid,-playboi-carti)",
+    "artist": "¥$, Kanye West, Ty Dolla $ign, Rich The Kid, Playboi Carti"
   },
   {
     "title": "As It Was",
@@ -288,6 +318,11 @@
     "title": "We Still Don't Trust You",
     "id": "we-still-dont-trust-you",
     "artist": "Future, Metro Boomin, The Weeknd"
+  },
+  {
+    "title": "Never Change",
+    "id": "never-change",
+    "artist": "Dustystaytrue"
   },
   {
     "title": "If We Being Rëal",
