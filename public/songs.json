@@ -140,6 +140,11 @@
     "artist": "The Kid LAROI, Justin Bieber"
   },
   {
+    "title": "Fuck Love",
+    "id": "fuck-love",
+    "artist": "XXXTENTACION"
+  },
+  {
     "title": "Hope",
     "id": "hope",
     "artist": "XXXTENTACION"
@@ -213,6 +218,11 @@
     "title": "DEVIL IS A LIE",
     "id": "devil-is-a-lie",
     "artist": "Tommy Richman"
+  },
+  {
+    "title": "What Happened to Virgil (feat. Gunna)",
+    "id": "what-happened-to-virgil",
+    "artist": "Lil Durk, Gunna"
   },
   {
     "title": "Overseas",
@@ -297,6 +307,11 @@
   {
     "title": "Perfect",
     "id": "perfect",
+    "artist": "Ed Sheeran"
+  },
+  {
+    "title": "Castle On The Hill",
+    "id": "castle-on-the-hill",
     "artist": "Ed Sheeran"
   },
   {
@@ -588,6 +603,11 @@
     "title": "METAMORPHOSIS",
     "id": "metamorphosis",
     "artist": "INTERWORLD"
+  },
+  {
+    "title": "Kaiju",
+    "id": "kaiju",
+    "artist": "sakanaction"
   },
   {
     "title": "ライラック",
