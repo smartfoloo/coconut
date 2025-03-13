@@ -805,9 +805,14 @@
     "artist": "YOASOBI"
   },
   {
-    "title": "Override",
-    "id": "override",
-    "artist": "Yoshida Yasei"
+    "title": "紅蓮華",
+    "id": "紅蓮華",
+    "artist": "LiSA"
+  },
+  {
+    "title": "炎",
+    "id": "炎",
+    "artist": "LiSA"
   },
   {
     "title": "Hello",
@@ -855,11 +860,6 @@
     "artist": "Eve"
   },
   {
-    "title": "Teenage Blue",
-    "id": "teenage-blue",
-    "artist": "Eve"
-  },
-  {
     "title": "インフェルノ",
     "id": "インフェルノ",
     "artist": "Mrs. GREEN APPLE"
@@ -898,11 +898,6 @@
     "title": "フライデー・ナイト",
     "id": "フライデー・ナイト",
     "artist": "natori"
-  },
-  {
-    "title": "ブルーベリー・ナイツ",
-    "id": "ブルーベリー・ナイツ",
-    "artist": "Macaroni Empitsu"
   },
   {
     "title": "まちがいさがし",
