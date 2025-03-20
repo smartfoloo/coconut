@@ -1,5 +1,15 @@
 [
   {
+    "title": "EVIL J0RDAN",
+    "id": "evil-j0rdan",
+    "artist": "Playboi Carti"
+  },
+  {
+    "title": "GOOD CREDIT (with Kendrick Lamar)",
+    "id": "good-credit",
+    "artist": "Playboi Carti, Kendrick Lamar"
+  },
+  {
     "title": "WE NEED ALL DA VIBES (with Young Thung & Ty Dolla $ign)",
     "id": "we-need-all-da-vibes",
     "artist": "Playboi Carti, Young Thug, Ty Dolla $ign"
@@ -8,6 +18,11 @@
     "title": "RATHER LIE (with The Weeknd)",
     "id": "rather-lie",
     "artist": "Playboi Carti, The Weeknd"
+  },
+  {
+    "title": "Dark Thoughts",
+    "id": "dark-thoughts",
+    "artist": "Lil Tecca"
   },
   {
     "title": "luther (with sza)",
@@ -30,39 +45,9 @@
     "artist": "Central Cee, 21 Savage"
   },
   {
-    "title": "APT.",
-    "id": "apt",
-    "artist": "ROSÉ, Bruno Mars"
-  },
-  {
     "title": "4X4",
     "id": "4x4",
     "artist": "Travis Scott"
-  },
-  {
-    "title": "Cry For Me",
-    "id": "cry-for-me",
-    "artist": "The Weeknd"
-  },
-  {
-    "title": "Timeless (with Playboi Carti)",
-    "id": "timeless-(with-playboi-carti)",
-    "artist": "The Weeknd, Playboi Carti"
-  },
-  {
-    "title": "DtMF",
-    "id": "dtmf",
-    "artist": "Bad Bunny"
-  },
-  {
-    "title": "FE!N (feat. Playboi Carti)",
-    "id": "fe!n-(feat.-playboi-carti)",
-    "artist": "Travis Scott, Playboi Carti"
-  },
-  {
-    "title": "BAND4BAND",
-    "id": "band4band",
-    "artist": "Central Cee, Lil Baby"
   },
   {
     "title": "No Pole",
@@ -88,6 +73,31 @@
     "title": "Sprinter",
     "id": "sprinter",
     "artist": "Dave, Central Cee"
+  },
+  {
+    "title": "Cry For Me",
+    "id": "cry-for-me",
+    "artist": "The Weeknd"
+  },
+  {
+    "title": "Timeless (with Playboi Carti)",
+    "id": "timeless-(with-playboi-carti)",
+    "artist": "The Weeknd, Playboi Carti"
+  },
+  {
+    "title": "DtMF",
+    "id": "dtmf",
+    "artist": "Bad Bunny"
+  },
+  {
+    "title": "FE!N (feat. Playboi Carti)",
+    "id": "fe!n-(feat.-playboi-carti)",
+    "artist": "Travis Scott, Playboi Carti"
+  },
+  {
+    "title": "BAND4BAND",
+    "id": "band4band",
+    "artist": "Central Cee, Lil Baby"
   },
   {
     "title": "Die With A Smile",
@@ -263,6 +273,11 @@
     "title": "Beautiful Things",
     "id": "beautiful-things",
     "artist": "Benson Boone"
+  },
+  {
+    "title": "APT.",
+    "id": "apt",
+    "artist": "ROSÉ, Bruno Mars"
   },
   {
     "title": "BIRDS OF A FEATHER",
