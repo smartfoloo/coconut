@@ -20,9 +20,19 @@
     "artist": "Playboi Carti, The Weeknd"
   },
   {
+    "title": "HBA",
+    "id": "hba",
+    "artist": "Playboi Carti"
+  },
+  {
     "title": "Dark Thoughts",
     "id": "dark-thoughts",
     "artist": "Lil Tecca"
+  },
+  {
+    "title": "NOKIA",
+    "id": "nokia",
+    "artist": "Drake"
   },
   {
     "title": "luther (with sza)",
@@ -98,6 +108,11 @@
     "title": "BAND4BAND",
     "id": "band4band",
     "artist": "Central Cee, Lil Baby"
+  },
+  {
+    "title": "God's Plan",
+    "id": "gods-plan",
+    "artist": "Drake"
   },
   {
     "title": "Die With A Smile",
