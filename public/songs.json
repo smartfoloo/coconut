@@ -115,19 +115,9 @@
     "artist": "Drake"
   },
   {
-    "title": "Die With A Smile",
-    "id": "die-with-a-smile",
-    "artist": "Lady Gaga, Bruno Mars"
-  },
-  {
-    "title": "Dancing In The Flames",
-    "id": "dancing-in-the-flames",
-    "artist": "The Weeknd"
-  },
-  {
-    "title": "Outta Time",
-    "id": "outta-time",
-    "artist": "Killbunk, Dustystaytrue"
+    "title": "STAY (with Justin Bieber)",
+    "id": "stay-(with-justin-bieber)",
+    "artist": "The Kid LAROI, Justin Bieber"
   },
   {
     "title": "Lucid Dreams",
@@ -165,18 +155,23 @@
     "artist": "Roddy Ricch"
   },
   {
-    "title": "STAY (with Justin Bieber)",
-    "id": "stay-(with-justin-bieber)",
-    "artist": "The Kid LAROI, Justin Bieber"
-  },
-  {
-    "title": "Here With Me",
-    "id": "here-with-me",
-    "artist": "d4vd"
-  },
-  {
     "title": "Fuck Love",
     "id": "fuck-love",
+    "artist": "XXXTENTACION"
+  },
+  {
+    "title": "Revenge",
+    "id": "revenge",
+    "artist": "XXXTENTACION"
+  },
+  {
+    "title": "Everybody Dies In Their Dreams",
+    "id": "everybody-dies-in-their-dreams",
+    "artist": "XXXTENTACION"
+  },
+  {
+    "title": "Moonlight",
+    "id": "moonlight",
     "artist": "XXXTENTACION"
   },
   {
@@ -188,6 +183,16 @@
     "title": "Sad",
     "id": "sad",
     "artist": "XXXTENTACION"
+  },
+  {
+    "title": "Die With A Smile",
+    "id": "die-with-a-smile",
+    "artist": "Lady Gaga, Bruno Mars"
+  },
+  {
+    "title": "Dancing In The Flames",
+    "id": "dancing-in-the-flames",
+    "artist": "The Weeknd"
   },
   {
     "title": "TOO MUCH",
@@ -203,6 +208,16 @@
     "title": "HUMBLE.",
     "id": "humble",
     "artist": "Kendrick Lamar"
+  },
+  {
+    "title": "Here With Me",
+    "id": "here-with-me",
+    "artist": "d4vd"
+  },
+  {
+    "title": "Outta Time",
+    "id": "outta-time",
+    "artist": "Killbunk, Dustystaytrue"
   },
   {
     "title": "I Had Some Help (feat. Morgan Wallen)",
