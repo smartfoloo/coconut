@@ -55,14 +55,19 @@
     "artist": "Central Cee, 21 Savage"
   },
   {
+    "title": "Too Many Nights (feat. Don Toliver & with Future)",
+    "id": "too-many-nights",
+    "artist": "Metro Boomin, Don Toliver, Future"
+  },
+  {
     "title": "4X4",
     "id": "4x4",
     "artist": "Travis Scott"
   },
   {
-    "title": "No Pole",
-    "id": "no-pole",
-    "artist": "Don Toliver"
+    "title": "Nightcrawler (feat. Swae Lee & Chief Keef)",
+    "id": "nightcrawler",
+    "artist": "Travis Scott, Swae Lee, Chief Keef"
   },
   {
     "title": "Not Like Us",
@@ -185,6 +190,11 @@
     "artist": "XXXTENTACION"
   },
   {
+    "title": "Better Now",
+    "id": "better-now",
+    "artist": "Post Malone"
+  },
+  {
     "title": "Die With A Smile",
     "id": "die-with-a-smile",
     "artist": "Lady Gaga, Bruno Mars"
@@ -218,6 +228,11 @@
     "title": "Outta Time",
     "id": "outta-time",
     "artist": "Killbunk, Dustystaytrue"
+  },
+  {
+    "title": "No Pole",
+    "id": "no-pole",
+    "artist": "Don Toliver"
   },
   {
     "title": "I Had Some Help (feat. Morgan Wallen)",
@@ -750,6 +765,36 @@
     "artist": "OFFICIAL HIGE DANDISM"
   },
   {
+    "title": "Hello",
+    "id": "hello",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
+    "title": "Cry Baby",
+    "id": "cry-baby",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
+    "title": "Universe",
+    "id": "universe",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
+    "title": "Same Blue",
+    "id": "same-blue",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
+    "title": "Sharon",
+    "id": "sharon",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
+    "title": "Tattoo",
+    "id": "tattoo",
+    "artist": "OFFICIAL HIGE DANDISM"
+  },
+  {
     "title": "縫い目",
     "id": "縫い目",
     "artist": "上野大樹"
@@ -868,31 +913,6 @@
     "title": "炎",
     "id": "炎",
     "artist": "LiSA"
-  },
-  {
-    "title": "Hello",
-    "id": "hello",
-    "artist": "OFFICIAL HIGE DANDISM"
-  },
-  {
-    "title": "Universe",
-    "id": "universe",
-    "artist": "OFFICIAL HIGE DANDISM"
-  },
-  {
-    "title": "Same Blue",
-    "id": "same-blue",
-    "artist": "OFFICIAL HIGE DANDISM"
-  },
-  {
-    "title": "Sharon",
-    "id": "sharon",
-    "artist": "OFFICIAL HIGE DANDISM"
-  },
-  {
-    "title": "Tattoo",
-    "id": "tattoo",
-    "artist": "OFFICIAL HIGE DANDISM"
   },
   {
     "title": "打上花火",
