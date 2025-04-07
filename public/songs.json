@@ -60,6 +60,11 @@
     "artist": "Metro Boomin, Don Toliver, Future"
   },
   {
+    "title": "Space Cadet (feat. Gunna)",
+    "id": "space-cadet",
+    "artist": "Metro Boomin, Gunna"
+  },
+  {
     "title": "4X4",
     "id": "4x4",
     "artist": "Travis Scott"
@@ -132,6 +137,11 @@
   {
     "title": "All Girls Are The Same",
     "id": "all-girls-are-the-same",
+    "artist": "Juice WRLD"
+  },
+  {
+    "title": "Candles",
+    "id": "candles",
     "artist": "Juice WRLD"
   },
   {
