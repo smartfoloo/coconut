@@ -145,6 +145,16 @@
     "artist": "Juice WRLD"
   },
   {
+    "title": "Used To",
+    "id": "used-to",
+    "artist": "Juice WRLD"
+  },
+  {
+    "title": "Hurt Me",
+    "id": "hurt-me",
+    "artist": "Juice WRLD"
+  },
+  {
     "title": "Candles",
     "id": "candles",
     "artist": "Juice WRLD"
@@ -152,6 +162,11 @@
   {
     "title": "Robbery",
     "id": "robbery",
+    "artist": "Juice WRLD"
+  },
+  {
+    "title": "Rich And Blind",
+    "id": "rich-and-blind",
     "artist": "Juice WRLD"
   },
   {
@@ -203,6 +218,11 @@
     "title": "Sad",
     "id": "sad",
     "artist": "XXXTENTACION"
+  },
+  {
+    "title": "Mockingbird",
+    "id": "mockingbird",
+    "artist": "Eminem"
   },
   {
     "title": "Better Now",
@@ -583,11 +603,6 @@
     "title": "Love You Better",
     "id": "love-you-better",
     "artist": "Tiagz"
-  },
-  {
-    "title": "Mockingbird",
-    "id": "mockingbird",
-    "artist": "Eminem"
   },
   {
     "title": "Pedro",
