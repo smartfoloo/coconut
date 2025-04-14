@@ -90,6 +90,16 @@
     "artist": "Kendrick Lamar, SZA"
   },
   {
+    "title": "Bandit (with YoungBoy Never Broke Again)",
+    "id": "bandit",
+    "artist": "Juice WRLD, YoungBoy Never Broke Again"
+  },
+  {
+    "title": "Misfit",
+    "id": "misfit",
+    "artist": "Juice WRLD"
+  },
+  {
     "title": "Doja",
     "id": "doja",
     "artist": "Central Cee"
@@ -113,11 +123,6 @@
     "title": "DtMF",
     "id": "dtmf",
     "artist": "Bad Bunny"
-  },
-  {
-    "title": "FE!N (feat. Playboi Carti)",
-    "id": "fe!n-(feat.-playboi-carti)",
-    "artist": "Travis Scott, Playboi Carti"
   },
   {
     "title": "BAND4BAND",
@@ -147,16 +152,6 @@
   {
     "title": "Used To",
     "id": "used-to",
-    "artist": "Juice WRLD"
-  },
-  {
-    "title": "Hurt Me",
-    "id": "hurt-me",
-    "artist": "Juice WRLD"
-  },
-  {
-    "title": "Candles",
-    "id": "candles",
     "artist": "Juice WRLD"
   },
   {
@@ -240,14 +235,9 @@
     "artist": "The Weeknd"
   },
   {
-    "title": "TOO MUCH",
-    "id": "too-much",
-    "artist": "The Kid LAROI"
-  },
-  {
-    "title": "SELFISH",
-    "id": "selfish",
-    "artist": "The Kid LAROI"
+    "title": "FE!N (feat. Playboi Carti)",
+    "id": "fe!n-(feat.-playboi-carti)",
+    "artist": "Travis Scott, Playboi Carti"
   },
   {
     "title": "HUMBLE.",
@@ -265,6 +255,21 @@
     "artist": "Killbunk, Dustystaytrue"
   },
   {
+    "title": "Hurt Me",
+    "id": "hurt-me",
+    "artist": "Juice WRLD"
+  },
+  {
+    "title": "Candles",
+    "id": "candles",
+    "artist": "Juice WRLD"
+  },
+  {
+    "title": "KTM Drip",
+    "id": "ktm-drip",
+    "artist": "Juice WRLD"
+  },
+  {
     "title": "No Pole",
     "id": "no-pole",
     "artist": "Don Toliver"
@@ -273,31 +278,6 @@
     "title": "I Had Some Help (feat. Morgan Wallen)",
     "id": "i-had-some-help-(feat.-morgan-wallen)",
     "artist": "Post Malone, Morgan Wallen"
-  },
-  {
-    "title": "Love Somebody",
-    "id": "love-somebody",
-    "artist": "Morgan Wallen"
-  },
-  {
-    "title": "A Bar Song (Tipsy)",
-    "id": "a-bar-song-(tipsy)",
-    "artist": "Shaboozey"
-  },
-  {
-    "title": "Sailor Song",
-    "id": "sailor-song",
-    "artist": "Gigi Perez"
-  },
-  {
-    "title": "Bling-Bang-Bang-Born",
-    "id": "bling-bang-bang-born",
-    "artist": "Creepy Nuts"
-  },
-  {
-    "title": "Magnetic",
-    "id": "magnetic",
-    "artist": "ILLIT"
   },
   {
     "title": "Blueberry Faygo",
@@ -318,6 +298,16 @@
     "title": "DEVIL IS A LIE",
     "id": "devil-is-a-lie",
     "artist": "Tommy Richman"
+  },
+  {
+    "title": "Blinding Lights",
+    "id": "blinding-lights",
+    "artist": "The Weeknd"
+  },
+  {
+    "title": "Save Your Tears",
+    "id": "save-your-tears",
+    "artist": "The Weeknd"
   },
   {
     "title": "What Happened to Virgil (feat. Gunna)",
@@ -400,14 +390,14 @@
     "artist": "Lewis Capaldi"
   },
   {
-    "title": "Blinding Lights",
-    "id": "blinding-lights",
-    "artist": "The Weeknd"
+    "title": "TOO MUCH",
+    "id": "too-much",
+    "artist": "The Kid LAROI"
   },
   {
-    "title": "Save Your Tears",
-    "id": "save-your-tears",
-    "artist": "The Weeknd"
+    "title": "SELFISH",
+    "id": "selfish",
+    "artist": "The Kid LAROI"
   },
   {
     "title": "Die For You",
@@ -458,6 +448,31 @@
     "title": "If We Being Rëal",
     "id": "if-we-being-rëal",
     "artist": "Yeat"
+  },
+  {
+    "title": "Love Somebody",
+    "id": "love-somebody",
+    "artist": "Morgan Wallen"
+  },
+  {
+    "title": "A Bar Song (Tipsy)",
+    "id": "a-bar-song-(tipsy)",
+    "artist": "Shaboozey"
+  },
+  {
+    "title": "Sailor Song",
+    "id": "sailor-song",
+    "artist": "Gigi Perez"
+  },
+  {
+    "title": "Bling-Bang-Bang-Born",
+    "id": "bling-bang-bang-born",
+    "artist": "Creepy Nuts"
+  },
+  {
+    "title": "Magnetic",
+    "id": "magnetic",
+    "artist": "ILLIT"
   },
   {
     "title": "Popular (with Playboi Carti & Madonna)",
