@@ -235,6 +235,26 @@
     "artist": "Kendrick Lamar"
   },
   {
+    "title": "In My Head",
+    "id": "in-my-head",
+    "artist": "Lil Tjay"
+  },
+  {
+    "title": "Calling My Phone (feat. 6LACK)",
+    "id": "calling-my-phone",
+    "artist": "Lil Tjay, 6LACK"
+  },
+  {
+    "title": "Pop Out (feat. Lil Tjay)",
+    "id": "pop-out",
+    "artist": "Polo G, Lil Tjay"
+  },
+  {
+    "title": "Hold On",
+    "id": "hold-on",
+    "artist": "Lil Tjay"
+  },
+  {
     "title": "Ransom",
     "id": "ransom",
     "artist": "Lil Tecca"
@@ -583,11 +603,6 @@
     "title": "Like I Do",
     "id": "like-i-do",
     "artist": "J. Tajor"
-  },
-  {
-    "title": "In My Head",
-    "id": "in-my-head",
-    "artist": "Lil Tjay"
   },
   {
     "title": "bounce (i just wanna dance)",
