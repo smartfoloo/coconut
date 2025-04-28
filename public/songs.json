@@ -150,13 +150,18 @@
     "artist": "Juice WRLD"
   },
   {
-    "title": "Robbery",
-    "id": "robbery",
+    "title": "Rich And Blind",
+    "id": "rich-and-blind",
     "artist": "Juice WRLD"
   },
   {
-    "title": "Rich And Blind",
-    "id": "rich-and-blind",
+    "title": "Armed And Dangerous",
+    "id": "armed-and-dangerous",
+    "artist": "Juice WRLD"
+  },
+  {
+    "title": "Already Dead",
+    "id": "already-dead",
     "artist": "Juice WRLD"
   },
   {
@@ -172,6 +177,11 @@
   {
     "title": "Empty",
     "id": "empty",
+    "artist": "Juice WRLD"
+  },
+  {
+    "title": "Robbery",
+    "id": "robbery",
     "artist": "Juice WRLD"
   },
   {
