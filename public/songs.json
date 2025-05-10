@@ -820,11 +820,6 @@
     "artist": "Omoinotake"
   },
   {
-    "title": "Azalea",
-    "id": "azalea",
-    "artist": "Kenshi Yonezu"
-  },
-  {
     "title": "hanataba",
     "id": "hanataba",
     "artist": "milet"
@@ -945,11 +940,6 @@
     "artist": "ELLEGARDEN"
   },
   {
-    "title": "風の日",
-    "id": "風の日",
-    "artist": "ELLEGARDEN"
-  },
-  {
     "title": "Sparkle",
     "id": "sparkle",
     "artist": "RADWIMPS"
@@ -1005,11 +995,6 @@
     "artist": "YOASOBI"
   },
   {
-    "title": "もしも命が描けたら",
-    "id": "もしも命が描けたら",
-    "artist": "YOASOBI"
-  },
-  {
     "title": "紅蓮華",
     "id": "紅蓮華",
     "artist": "LiSA"
@@ -1055,11 +1040,6 @@
     "artist": "Vaundy"
   },
   {
-    "title": "エメラルド",
-    "id": "エメラルド",
-    "artist": "back number"
-  },
-  {
     "title": "Sleepwalk",
     "id": "sleepwalk",
     "artist": "natori"
@@ -1067,11 +1047,6 @@
   {
     "title": "Overdose",
     "id": "overdose",
-    "artist": "natori"
-  },
-  {
-    "title": "エウレカ",
-    "id": "エウレカ",
     "artist": "natori"
   },
   {
@@ -1100,18 +1075,18 @@
     "artist": "GReeeen"
   },
   {
-    "title": "pride",
-    "id": "pride",
-    "artist": "GReeeen"
-  },
-  {
-    "title": "愛し君へ",
-    "id": "愛し君へ",
-    "artist": "GReeeen"
-  },
-  {
     "title": "Tomorrow never knows",
     "id": "tomorrow-never-knows",
+    "artist": "Mr.Children"
+  },
+  {
+    "title": "しるし",
+    "id": "しるし",
+    "artist": "Mr.Children"
+  },
+  {
+    "title": "365日",
+    "id": "365日",
     "artist": "Mr.Children"
   },
   {
