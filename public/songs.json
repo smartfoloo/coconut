@@ -230,6 +230,11 @@
     "artist": "Eminem"
   },
   {
+    "title": "Heart On Ice",
+    "id": "heart-on-ice",
+    "artist": "Rod Wave"
+  },
+  {
     "title": "Die With A Smile",
     "id": "die-with-a-smile",
     "artist": "Lady Gaga, Bruno Mars"
@@ -275,6 +280,11 @@
     "artist": "Wiz Khalifa, Charlie Puth"
   },
   {
+    "title": "Mo Bamba",
+    "id": "mo-bamba",
+    "artist": "Sheck Wes"
+  },
+  {
     "title": "Ransom",
     "id": "ransom",
     "artist": "Lil Tecca"
@@ -308,6 +318,11 @@
     "title": "One Dance",
     "id": "one-dance",
     "artist": "Drake, Wizkid, Kyla"
+  },
+  {
+    "title": "The Hills",
+    "id": "the-hills",
+    "artist": "The Weeknd"
   },
   {
     "title": "Blinding Lights",
@@ -800,6 +815,11 @@
     "artist": "INTERWORLD"
   },
   {
+    "title": "ブルーアンバー",
+    "id": "ブルーアンバー",
+    "artist": "back number"
+  },
+  {
     "title": "Kaiju",
     "id": "kaiju",
     "artist": "sakanaction"
@@ -828,11 +848,6 @@
     "title": "幾億光年",
     "id": "幾億光年",
     "artist": "Omoinotake"
-  },
-  {
-    "title": "hanataba",
-    "id": "hanataba",
-    "artist": "milet"
   },
   {
     "title": "絆ノ奇跡",
@@ -905,16 +920,6 @@
     "artist": "OFFICIAL HIGE DANDISM"
   },
   {
-    "title": "縫い目",
-    "id": "縫い目",
-    "artist": "上野大樹"
-  },
-  {
-    "title": "満ちてゆく",
-    "id": "満ちてゆく",
-    "artist": "Fujii Kaze"
-  },
-  {
     "title": "白日",
     "id": "白日",
     "artist": "King Gnu"
@@ -925,14 +930,34 @@
     "artist": "Kenshi Yonezu"
   },
   {
-    "title": "ねっこ",
-    "id": "ねっこ",
-    "artist": "King Gnu"
+    "title": "馬と鹿",
+    "id": "馬と鹿",
+    "artist": "Kenshi Yonezu"
   },
   {
     "title": "水平線",
     "id": "水平線",
     "artist": "back number"
+  },
+  {
+    "title": "HANABI",
+    "id": "hanabi",
+    "artist": "Mr.Children"
+  },
+  {
+    "title": "Tomorrow never knows",
+    "id": "tomorrow-never-knows",
+    "artist": "Mr.Children"
+  },
+  {
+    "title": "名もなき詩",
+    "id": "名もなき詩",
+    "artist": "Mr.Children"
+  },
+  {
+    "title": "innocent world",
+    "id": "innocent-world",
+    "artist": "Mr.Children"
   },
   {
     "title": "どうして",
@@ -997,11 +1022,6 @@
   {
     "title": "アンコール",
     "id": "アンコール",
-    "artist": "YOASOBI"
-  },
-  {
-    "title": "三原色",
-    "id": "三原色",
     "artist": "YOASOBI"
   },
   {
@@ -1070,6 +1090,11 @@
     "artist": "natori"
   },
   {
+    "title": "hanataba",
+    "id": "hanataba",
+    "artist": "milet"
+  },
+  {
     "title": "まちがいさがし",
     "id": "まちがいさがし",
     "artist": "Suda Masaki"
@@ -1090,16 +1115,6 @@
     "artist": "GReeeen"
   },
   {
-    "title": "HANABI",
-    "id": "hanabi",
-    "artist": "Mr.Children"
-  },
-  {
-    "title": "Tomorrow never knows",
-    "id": "tomorrow-never-knows",
-    "artist": "Mr.Children"
-  },
-  {
     "title": "しるし",
     "id": "しるし",
     "artist": "Mr.Children"
@@ -1110,13 +1125,13 @@
     "artist": "Mr.Children"
   },
   {
-    "title": "I Will Be There With You",
-    "id": "i-will-be-there-with-you",
-    "artist": "Various Artists"
+    "title": "ねっこ",
+    "id": "ねっこ",
+    "artist": "King Gnu"
   },
   {
-    "title": "Another Sky",
-    "id": "another-sky",
-    "artist": "Taro Hakase"
+    "title": "満ちてゆく",
+    "id": "満ちてゆく",
+    "artist": "Fujii Kaze"
   }
 ]
